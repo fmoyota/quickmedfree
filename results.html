@@ -154,6 +154,7 @@
 			var jqxhr = $.getJSON( "https://www.edifarm.com.ec/edifarm_quickmed/ws/mobile/buscar.php",
 			{
 				producto:prod,
+				device:device.uuid,
 				tabla:tab
 			}, function(response) {
 			  console.log( "success" );
