@@ -62,6 +62,7 @@ var getSettings = function getSettings(){
 					})
 					  .done(function(data) {
 						var r=data.respuesta;
+						$('#ej').html(JSON.stringify(data));
 						if(r==='1'){
 							$('#email').val(data.datos.email);
 							$('#nombres').val(data.datos.fname);
