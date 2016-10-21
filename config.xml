@@ -5,7 +5,7 @@
 	id        = "ec.com.edifarm.quickmedfree"
 	versionCode="1.1.0"
 	version   = "1.1.0">
-	<name>QuickMed Lite		</name>
+	<name>QuickMed Lite</name>
 	<description>¡La herramienta digital eficaz para su consulta!, encontrará más de 5000 productos farmacéuticos, con datos técnicos sobre indicaciones, contraindicaciones, dosificación, recomendaciones, precauciones, reacciones adversas, dosis pediátrica, categoría teratogénica y CIE. Cuenta además con precios referenciales de venta al público.		</description>
 	<author href="https://www.edifarm.com.ec" email="fmoyota@edifarm.com.ec">Fernando Moyota		</author>
 	
