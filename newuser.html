@@ -448,6 +448,7 @@
 					console.log('send form new user');
 				})
 				  .done(function(data) {
+					  console.log(''+JSON.stringigy(data));
 					var r=data.respuesta;
 					if(r=='1'){
 						$('#messageModal').modal('hide');

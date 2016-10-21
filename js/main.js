@@ -43,3 +43,45 @@ var checkDevice = function checkDevice(){
 					$('.loader').fadeOut('slow');
 				});	
 };
+
+
+var getSettings = function getSettings(){
+	
+					
+					var jqxhr = $.getJSON( "https://www.edifarm.com.ec/edifarm_quickmed/ws/mobile/login.php",
+					{
+						deviceuuid:device.uuid, 
+						devicename:device.manufacturer, 
+						version:device.version, 
+						platform:device.platform, 
+						model:device.model,
+						action:'consultar',
+						
+					}, function() {
+						console.log('send form new user');
+					})
+					  .done(function(data) {
+						var r=data.respuesta;
+						if(r==='1'){
+							$('#email').val(data.datos.email);
+							$('#nombres').val(data.datos.fname);
+							$('#apellidos').val(data.datos.lname);
+							$('#telefono').val(data.datos.phone);
+							$("#pais option").filter(function() {
+								return $(this).text() === data.datos.country; 
+							}).prop('selected', true);
+							$('#ciudad').val(data.datos.city);
+							
+							$('#cumple').val(data.datos.birth);
+						}else{
+							window.location='index.html';
+						}
+						
+					  })
+					  .fail(function(data) {
+						console.log('Error' + JSON.stringify(data));
+					  })
+					  .always(function() {
+					$('.loader').fadeOut('slow');
+					});
+};
