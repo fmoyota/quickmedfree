@@ -324,7 +324,7 @@
           <label>Confirma Contrase&ntilde;a</label>
           <input name="clavec" type="password" id="clavec" class="form-control"/>
         </div>
-        <input type="button" name="enviar" class="btn btn-primary" value="Crear" id="enviar">
+        <input type="button" name="enviar" class="btn btn-primary" value="Crear cuenta" id="enviar">
         <p>* Al guardar tus datos en QuickMed&reg; aceptas nuestros términos y condiciones. <a href="#" class="external" target="_blank">Ver aquí <i class="fa fa-share-square-o"></i></a></p>
       </form>
     </div>
@@ -393,15 +393,28 @@
 				
 				
 				$('.loader').fadeIn('fast');
+				
+				console.log('entra a registro');
 				var email=$('#email').val();
+				console.log('email '+email);
 				var namef=$('#nombres').val();
+				console.log('nombres '+namef);
 				var lastn=$('#apellidos').val();
+				console.log('apellido '+lastn);
 				var uphone=$('#telefono').val();
-				var nation=$('#pais option:selected').text();
+				console.log('telefono '+uphone);
+				var nation=$('#pais option:selected').val();
+				console.log('pais '+nation);
 				var ucity=$('#ciudad').val();
+				console.log('ciudad '+ucity);
 				var uclave=$('#clave').val();
+				console.log('clave '+uclave);
 				var uclavec=$('#clavec').val();
+				console.log('clavec '+uclavec);
 				var ubirth=$('#cumple').val();
+				console.log('cumple '+ubirth);
+				
+				
 				
 				
 				if(email=='' || namef=='' || lastn=='' || uphone=='' || nation=='' || ucity =='' || uclave =='' || ubrith==''){
@@ -413,7 +426,7 @@
 					$('#messageModal').modal('toggle');
 					$('.loader').fadeOut('slow');
 				}else{
-				uclave=md5(uclave);
+					uclave=md5(uclave);
 				var jqxhr = $.getJSON( "https://www.edifarm.com.ec/edifarm_quickmed/ws/mobile/login.php",
 				{
 					deviceuuid:device.uuid, 
@@ -449,7 +462,7 @@
 					
 				  })
 				  .always(function() {
-				$('.loader').fadeOut('slow');
+					$('.loader').fadeOut('slow');
 				});	
 				
 				}
