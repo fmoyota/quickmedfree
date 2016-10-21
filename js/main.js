@@ -62,7 +62,7 @@ var getSettings = function getSettings(){
 					})
 					  .done(function(data) {
 						var r=data.respuesta;
-						$('#ej').html(JSON.stringify(data));
+						
 						if(r==='1'){/*
 							$('#email').val(data.datos.email);
 							$('#nombres').val(data.datos.fname);
@@ -75,7 +75,8 @@ var getSettings = function getSettings(){
 							
 							$('#cumple').val(data.datos.birth);
 						*/}else{
-							window.location='index.html';
+							//window.location='index.html';
+							$('#ej').html(JSON.stringify(data));
 						}
 						
 					  })

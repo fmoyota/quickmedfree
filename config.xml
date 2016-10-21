@@ -6,10 +6,10 @@
 	versionCode="1.1.0"
 	version   = "1.1.0">
 	<name>QuickMed Lite</name>
-	<description>¡La herramienta digital eficaz para su consulta!, encontrará más de 5000 productos farmacéuticos, con datos técnicos sobre indicaciones, contraindicaciones, dosificación, recomendaciones, precauciones, reacciones adversas, dosis pediátrica, categoría teratogénica y CIE. Cuenta además con precios referenciales de venta al público.		</description>
-	<author href="https://www.edifarm.com.ec" email="fmoyota@edifarm.com.ec">Fernando Moyota		</author>
+	<description>¡La herramienta digital eficaz para su consulta!, encontrará más de 5000 productos farmacéuticos, con datos técnicos sobre indicaciones, contraindicaciones, dosificación, recomendaciones, precauciones, reacciones adversas, dosis pediátrica, categoría teratogénica y CIE. Cuenta además con precios referenciales de venta al público.</description>
+	<author href="https://www.edifarm.com.ec" email="fmoyota@edifarm.com.ec">Fernando Moyota</author>
 	
-	<feature name="http://api.phonegap.com/1.0/file" />
+	<!--<feature name="http://api.phonegap.com/1.0/file" />
 	<feature name="http://api.phonegap.com/1.0/geolocation" />
 	<feature name="http://api.phonegap.com/1.0/media" />
 	<feature name="http://api.phonegap.com/1.0/network" />
@@ -21,7 +21,7 @@
 	<preference name="target-device" value="universal" />
 	<preference name="webviewbounce" value="true" />
 	<preference name="stay-in-webview" value="false" />
-	<!--<preference name="ios-statusbarstyle" value="black-transparent" />-->
+	<preference name="ios-statusbarstyle" value="black-transparent" />
 	<preference name="detect-data-types" value="true" />
 	<preference name="exit-on-suspend" value="true" />
 	<preference name="show-splash-screen-spinner" value="true" />
@@ -37,15 +37,15 @@
 	<preference name="HideKeyboardFormAccessoryBar" value="true" />
 	<preference name="SuppressesIncrementalRendering" value="false" />
 	<preference name="windows-identity-name" value="" />
-	<!--<preference name="android-minSdkVersion" value="11" />
+	<preference name="android-minSdkVersion" value="11" />
 	<preference name="android-targetSdkVersion" value="19" />
-	<preference name="android-maxSdkVersion" value="23" />-->
+	<preference name="android-maxSdkVersion" value="23" />
 	<preference name="android-installLocation" value="auto" />
 	<preference name="SplashScreenDelay" value="3000" />
 	<preference name="ErrorUrl" value="https://quickmed.edifarm.com.ec" />
 	<preference name="BackgroundColor" value="0x183e4e" />
 	<preference name="DisallowOverscroll" value="true" />
-	<preference name="LoadUrlTimeoutValue" value="https://quickmed.edifarm.com.ec" />
+	<preference name="LoadUrlTimeoutValue" value="https://quickmed.edifarm.com.ec" />-->
 	
 	
 	
@@ -78,6 +78,8 @@
 	<splash src="img/splash/QM-480x320.png" width="480" height="320" /> 
 	
 		<preference name="StatusBarOverlaysWebView" value="true" />
+		<preference name="detect-data-types" value="true" />
+		<preference name="target-device" value="handset" />
 	
 	</platform>
 	
@@ -105,26 +107,42 @@
 	
 	</platform>
 	
+	
+	
 	<icon src="icon.png" />
+	<preference name="orientation" value="portrait" />
+	<preference name="detect-data-types" value="true" />
+	<preference name="target-device" value="universal" />
+	<preference name="phonegap-version" value="cli-5.4.1" />
+    <preference name="fullscreen" value="true"/>
+	<preference name="stay-in-webview" value="false" />
 	
-	<content src="index.html" />		
-	<allow-navigation href="*" />
-	<access origin="*" subdomains="true" browserOnly="true" />
-	<access uri="*" subdomains="true" />
-	<allow-intent href="http://*/*" />
-	<allow-intent href="https://*/*" />
-	
+	<feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/network"/>
 	<feature name="InAppBrowser">
 		<param name="android-package" value="org.apache.cordova.InAppBrowser" />
 		<param name="ios-package" value="CDVInAppBrowser" />
 	</feature>
+	
+	
+    <content src="index.html" />
+	
+    <allow-navigation href="*" />
+	<access origin="*" subdomains="true" browserOnly="true" />
+	<access uri="*" subdomains="true" />
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
 	
 	<plugin name="com.ohh2ahh.plugins.appavailability" source="pgb" spec="0.3.1" />
 	<plugin name="com.phonegap.plugin.statusbar" source="pgb" spec="1.1.0" />
 	<plugin name="cordova-plugin-inappbrowser" spec="1.4.0" />
 	<plugin name="cordova-plugin-whitelist" spec="1.2.2" />
 	<plugin name="org.apache.cordova.device" spec="1.0.1" />
+	
 	<plugin name="com.danielcwilson.plugins.googleanalytics" spec="0.6.1" source="pgb" />
+	
 	
 	
 </widget>

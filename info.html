@@ -175,6 +175,8 @@
 			  	var foto=data.producto.foto;
 				if(foto!=''){
 					$('#portada').attr('src','https://www.edifarm.com.ec/'+foto);
+				}else{
+					$('#portada').hide();
 				}
 				var prin=data.principio;
 				var principios='';
