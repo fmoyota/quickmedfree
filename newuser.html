@@ -394,28 +394,15 @@
 				
 				$('.loader').fadeIn('fast');
 				
-				console.log('entra a registro');
 				var email=$('#email').val();
-				console.log('email '+email);
 				var namef=$('#nombres').val();
-				console.log('nombres '+namef);
 				var lastn=$('#apellidos').val();
-				console.log('apellido '+lastn);
 				var uphone=$('#telefono').val();
-				console.log('telefono '+uphone);
 				var nation=$('#pais option:selected').val();
-				console.log('pais '+nation);
 				var ucity=$('#ciudad').val();
-				console.log('ciudad '+ucity);
 				var uclave=$('#clave').val();
-				console.log('clave '+uclave);
 				var uclavec=$('#clavec').val();
-				console.log('clavec '+uclavec);
 				var ubirth=$('#cumple').val();
-				console.log('cumple '+ubirth);
-				
-				
-				
 				
 				if(email=='' || namef=='' || lastn=='' || uphone=='' || nation=='' || ucity =='' || uclave =='' || ubirth==''){
 					$('#mensaje span').html('Verifica los datos ingresados. Todos los campos son obligatorios');
@@ -460,7 +447,8 @@
 					
 				  })
 				  .fail(function() {
-					
+						$('#mensaje span').html('Verifica tu acceso a datos o wifi');
+						$('#messageModal').modal('show');
 				  })
 				  .always(function() {
 					$('.loader').fadeOut('slow');

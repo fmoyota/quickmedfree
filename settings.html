@@ -475,6 +475,8 @@
 						
 					  })
 					  .fail(function() {
+						$('#mensaje span').html('Verifica tu acceso a datos o wifi');
+						$('#messageModal').modal('show');
 						
 					  })
 					  .always(function() {

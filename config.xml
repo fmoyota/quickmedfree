@@ -97,6 +97,9 @@
 	<splash src="img/splash/QM-1600x960.png" qualifier="" />
 	<splash src="img/splash/QM-1280x1920.png" qualifier="" />
 	<splash src="img/splash/QM-1920x1280.png" qualifier="" />
+	
+	<supports-screens anyDensity="true" resizeable="true" smallScreens="true" normalScreens="true" largeScreens="true" xlargeScreens="true" />
+	
 	</platform>
 	
 	<icon src="icon.png" />

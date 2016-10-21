@@ -113,16 +113,11 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
         document.addEventListener("deviceready", checkDevice, false);
 		
 		$('#entrar').click(function(e) {
-            
-			
-				
 				
 				$('.loader').fadeIn('fast');
 				var email=$('#email').val();
 				
 				var uclave=$('#clave').val();
-				
-				
 				
 				if(email =='' || uclave ==''){
 					$('#mensaje span').html('Verifica los datos ingresados. Todos los campos son obligatorios');
@@ -156,22 +151,16 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 					  })
 					  .fail(function(data) {
 						console.log('Error' + JSON.stringify(data));
+						$('#mensaje span').html('Verifica tu acceso a datos o wifi');
+						$('#messageModal').modal('show');
 					  })
 					  .always(function() {
 					$('.loader').fadeOut('slow');
 					});	
 				
 				}
-						
-			
-			
 			
         });
-		
-		
-		$('.loader').hide('slow');
-		
-		
 		
     });
     	
