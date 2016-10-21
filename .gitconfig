@@ -1,0 +1,8 @@
+[user]
+	name = Fernando Moyota
+	email = fmoyota@gmail.com
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+	interactive = auto
