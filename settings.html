@@ -413,6 +413,9 @@
 
 		
 		$(document).ready(function(e) {
+			
+			getSettings();
+			
         document.addEventListener("deviceready", checkDevice, false);
             $('#btnProductos').click(function(e) {
                 $('#tabla').val('producto');
@@ -492,8 +495,6 @@
 				}
 						
 			});  
-			
-			
 			
 			
         });

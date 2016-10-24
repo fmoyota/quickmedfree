@@ -47,7 +47,8 @@ var checkDevice = function checkDevice(){
 
 var getSettings = function getSettings(){
 	
-					
+	//device={'uuid' : '3988505C-F36B-434B-9CD8-E0F39D2DA200','manufacturer' : 'Apple','version' : '10.0.2','platform' : 'iOS','model' : 'iPhone7,2','action' : 'consultar'};	
+				
 					var jqxhr = $.getJSON( "https://www.edifarm.com.ec/edifarm_quickmed/ws/mobile/login.php",
 					{
 						deviceuuid:device.uuid, 
@@ -62,6 +63,7 @@ var getSettings = function getSettings(){
 					})
 					  .done(function(data) {
 						var r=data.respuesta;
+						$('#ej').html(JSON.stringify(data));
 						
 						if(r==='1'){/*
 							$('#email').val(data.datos.email);
@@ -75,7 +77,6 @@ var getSettings = function getSettings(){
 							
 							$('#cumple').val(data.datos.birth);
 						*/}else{
-							//window.location='index.html';
 							$('#ej').html(JSON.stringify(data));
 						}
 						
