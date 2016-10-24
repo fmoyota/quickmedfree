@@ -85,7 +85,7 @@ var getSettings = function getSettings(){
 					  })
 					  .fail(function(data) {
 						console.log('Error' + JSON.stringify(data));
-						alert('Error' + JSON.stringify(data));
+						//alert('Error' + JSON.stringify(data));
 					  })
 					  .always(function() {
 					$('.loader').fadeOut('slow');
