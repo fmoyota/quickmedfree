@@ -394,6 +394,24 @@
 </div><!-- /.modal -->
 
 
+<div class="modal fade visible-sm" tabindex="-1" role="dialog" id="userModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-sm">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">QuickMed </h4>
+      </div>
+      <div class="modal-body">
+      <p><i class="fa fa-check-circle-o"></i> <span>Tu registro se ha guardado con éxto.</span><br>
+      Bienvendido a QuickMed&reg; App</p>
+      </div>
+       <div class="modal-footer">
+        <button class="btn btn-primary btn-sm" data-dismiss="modal" type="button">Aceptar <i class="fa fa-thumbs-o-up"></i></button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 <!-- jQuery --> 
 <script src="vendor/jquery/jquery.min.js"></script> 
 
@@ -460,6 +478,7 @@
 					$('.loader').fadeOut('slow');
 				}else {
 					uclave=md5(uclave);
+					alert('update');
 					var jqxhr = $.post( "https://www.edifarm.com.ec/edifarm_quickmed/ws/mobile/login.php",
 					{
 						deviceuuid:device.uuid, 
@@ -481,7 +500,7 @@
 						console.log('send form new user');
 					})
 					  .done(function(data) {
-						
+						$('#userModal').modal('show');
 					  })
 					  .fail(function() {
 						$('#mensaje span').html('Verifica tu acceso a datos o wifi');

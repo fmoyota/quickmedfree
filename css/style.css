@@ -204,3 +204,10 @@ body{
 	/*font-size:0.8em;*/
 }
 }
+
+.modal-content.modal-sm {
+    width: 60%;
+    margin: auto;
+	font-size:1.2em;
+	text-align:center;
+}
