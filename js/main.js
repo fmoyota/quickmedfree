@@ -47,6 +47,9 @@ var checkDevice = function checkDevice(){
 
 var getSettings = function getSettings(){
 	
+	$('.loader').fadeOut('slow');
+	
+						$('#ej').html(JSON.stringify(device));
 	/*
 	device={'uuid' : '3988505C-F36B-434B-9CD8-E0F39D2DA200','manufacturer' : 'Apple','version' : '10.0.2','platform' : 'iOS','model' : 'iPhone7,2','action' : 'consultar'};	
 		// */		
@@ -64,8 +67,8 @@ var getSettings = function getSettings(){
 					})
 					  .done(function(data) {
 						var r=data.respuesta;
-						//$('#ej').html(JSON.stringify(data));
-						
+						$('#ej').html(JSON.stringify(data));
+						alert('done');
 						if(r==='1'){ //*
 							$('#email').val(data.datos.email);
 							$('#nombres').val(data.datos.fname);
@@ -85,7 +88,7 @@ var getSettings = function getSettings(){
 					  })
 					  .fail(function(data) {
 						console.log('Error' + JSON.stringify(data));
-						//alert('Error' + JSON.stringify(data));
+						alert('Error' + JSON.stringify(data));
 					  })
 					  .always(function() {
 					$('.loader').fadeOut('slow');
