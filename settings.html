@@ -431,10 +431,8 @@
 
 		
 		$(document).ready(function(e) {
+        document.addEventListener("deviceready", getSettings, false);
 			
-			getSettings();
-			
-        document.addEventListener("deviceready", checkDevice, false);
             $('#btnProductos').click(function(e) {
                 $('#tabla').val('producto');
 				$('#modal-title span').html('Productos');
