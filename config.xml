@@ -113,7 +113,7 @@
 	<preference name="orientation" value="portrait" />
 	<preference name="detect-data-types" value="true" />
 	<preference name="target-device" value="universal" />
-	<preference name="phonegap-version" value="cli-5.4.1" />
+	<preference name="phonegap-version" value="cli-6.3.0" />
     <preference name="fullscreen" value="true"/>
 	<preference name="stay-in-webview" value="false" />
 	
