@@ -325,7 +325,7 @@
           <input name="clavec" type="password" id="clavec" class="form-control"/>
         </div>
         <div class="form-group input-group-sm">
-          <label>Confirma Contrase&ntilde;a</label>
+          <label>Recibir notificaciones por correo? </label>
           <div class="switch">
           	<input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox" value="1">
           	<label for="cmn-toggle-1"></label>
@@ -413,7 +413,9 @@
 				var notif=$('#cmn-toggle-1:checked').val();
 				
 				if(notif){
-				alert (notif);
+					notif='1';
+				}else{
+					notif='0';
 				}
 				
 				if(email=='' || namef=='' || lastn=='' || uphone=='' || nation=='' || ucity =='' || uclave =='' || ubirth==''){
@@ -441,6 +443,7 @@
 					lastname:lastn,
 					password:uclave,
 					birth:ubirth,
+					notification:notif,
 					action:'registro',
 					
 				}, function() {

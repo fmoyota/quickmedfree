@@ -58,6 +58,17 @@
   <div class="clearfix">&nbsp;</div>
   <section id="personales">
     <div class="account">
+    
+     <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#account" aria-controls="account" role="tab" data-toggle="tab"><i class="fa fa-user"></i> <span >Cuenta</span></a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><i class="fa fa-certificate"></i> <span >Suscripci&oacute;n</span></a></li>
+   <!-- <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>-->
+  </ul>    
+    
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="account">
       <h4 class="subtitulo">Tus datos Personales</h4>
       <p>Déjanos saber más de ti.</p>
       <form>
@@ -337,9 +348,33 @@
           <label>Confirma Contrase&ntilde;a</label>
           <input name="clavec" type="password" id="clavec" class="form-control"/>
         </div>
+        
+        <div class="form-group input-group-sm">
+          <label>Recibir notificaciones por correo? </label>
+          <div class="switch">
+          	<input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox" value="1">
+          	<label for="cmn-toggle-1"></label>
+          </div>
+        </div>
+        
         <input type="button" name="enviar" class="btn btn-primary" value="Guardar" id="enviar">
         <p>* Al guardar tus datos en QuickMed&reg; aceptas nuestros términos y condiciones. <a href="terms.html">Ver aquí <i class="fa fa-share-square-o"></i></a></p>
       </form>
+      
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="profile">
+      
+      <h5>Suscríbete a QuickMed Premium</h5>
+		<p>Mas información en <a href="mailto:farma@edifarm.com.ec">farma@edifarm.com.ec</a></p>      
+      </div>
+      <!--<div role="tabpanel" class="tab-pane fade" id="messages">...</div>
+      <div role="tabpanel" class="tab-pane fade" id="settings">...</div>-->
+    </div>
+    
+    
+      
+
+
     </div>
   </section>
   <div class="clearfix" id="ej">&nbsp;</div>
@@ -394,7 +429,7 @@
 </div><!-- /.modal -->
 
 
-<div class="modal fade visible-sm" tabindex="-1" role="dialog" id="userModal">
+<div class="modal fade" tabindex="-1" role="dialog" id="userModal">
   <div class="modal-dialog" role="document">
     <div class="modal-content modal-sm">
       <div class="modal-header">
@@ -513,7 +548,7 @@
 						
 			});  
 			
-			
+			//getSettings();
         });
 	</script>
 </body>
