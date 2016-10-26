@@ -67,7 +67,7 @@ var getSettings = function getSettings(){
 					})
 					  .done(function(data) {
 						var r=data.respuesta;
-						//$('#ej').html(JSON.stringify(data));
+						$('#ej').html(JSON.stringify(data));
 						var not='0';
 						if(r==='1'){ //*
 							$('#email').val(data.datos.email);
@@ -81,7 +81,7 @@ var getSettings = function getSettings(){
 							
 							$('#cumple').val(data.datos.birth);
 							not=data.datos.notification;
-							if(not){
+							if(not==='1'){
 								$('#cmn-toggle-1').attr('checked',true);
 							}else{
 								$('#cmn-toggle-1').attr('checked',false);

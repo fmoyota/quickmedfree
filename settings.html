@@ -498,7 +498,7 @@
 				var uclave=$('#clave').val();
 				var uclavec=$('#clavec').val();
 				var ubirth=$('#cumple').val();
-				
+				var notif=$('#cmn-toggle-1:checked').val();
 				
 				if(email=='' || namef=='' || lastn=='' || uphone=='' || nation=='' || ucity =='' || uclave =='' || ubirth==''){
 					
@@ -511,7 +511,7 @@
 					$('.loader').fadeOut('slow');
 				}else {
 					uclave=md5(uclave);
-					alert('update');
+					//alert('update');
 					var jqxhr = $.post( "https://www.edifarm.com.ec/edifarm_quickmed/ws/mobile/login.php",
 					{
 						deviceuuid:device.uuid, 
@@ -527,6 +527,7 @@
 						lastname:lastn,
 						password:uclave,
 						birth:ubirth,
+						notification:notif,
 						action:'actualizar',
 						
 					}, function() {
@@ -534,6 +535,7 @@
 					})
 					  .done(function(data) {
 						$('#userModal').modal('show');
+						getSettings();
 					  })
 					  .fail(function() {
 						$('#mensaje span').html('Verifica tu acceso a datos o wifi');
@@ -548,7 +550,7 @@
 						
 			});  
 			
-			//getSettings();
+			getSettings();
         });
 	</script>
 </body>
