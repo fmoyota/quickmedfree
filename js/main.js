@@ -102,3 +102,5 @@ var getSettings = function getSettings(){
 					$('.loader').fadeOut('slow');
 					});
 };
+
+window.analytics.startTrackerWithId('UA-18919211-2') ;
