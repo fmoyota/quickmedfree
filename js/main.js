@@ -103,4 +103,17 @@ var getSettings = function getSettings(){
 					});
 };
 
+
+function admobDisplay(){
+			 // Set AdMobAds options:
+    admob.setOptions({
+        publisherId:          "ca-app-pub-7271854751013605/3853227419",  // Required
+        interstitialAdId:     "ca-app-pub-7271854751013605/5469561410",  // Optional
+    });
+		
+}
+
 window.analytics.startTrackerWithId('UA-18919211-2') ;
+
+
+document.addEventListener("deviceready", admobDisplay, false);

@@ -143,6 +143,8 @@
 	
 	<plugin name="com.danielcwilson.plugins.googleanalytics" spec="0.6.1" source="pgb" />
 	
+	<!-- Monetiza App AdMob-->
+	<plugin name="phonegap-admob" source="npm"/>
 	
 	
 </widget>

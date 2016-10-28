@@ -550,7 +550,10 @@
 			
 			getSettings();
 			
-			window.analytics.trackView('Info?doc='+doc);
+			window.analytics.trackView('Settings');
+			admob.requestInterstitialAd({
+				autoShowInterstitial: true
+			});
         });
 	</script>
 </body>

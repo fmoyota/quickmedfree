@@ -476,6 +476,10 @@
 			$('.loader').fadeOut('slow');
 			
 			window.analytics.trackView('Registro');
+			
+			admob.requestInterstitialAd({
+				autoShowInterstitial: true
+			});
         });
 		
 		
