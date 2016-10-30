@@ -105,12 +105,33 @@ var getSettings = function getSettings(){
 
 
 function admobDisplay(){
+	
+	var banner='ca-app-pub-7271854751013605/3853227419';
+	var interlestial='ca-app-pub-7271854751013605/5469561410';
+	
+	
       document.removeEventListener('deviceready', admobDisplay, false);
 			 // Set AdMobAds options:
-    admob.setOptions({
-        publisherId:          "ca-app-pub-7271854751013605/3853227419",  // Required
-        interstitialAdId:     "ca-app-pub-7271854751013605/5469561410",  // Optional
+    
+	switch (device.platform){
+		case 'iOS':
+			banner='ca-app-pub-7271854751013605/3853227419';
+			interlestial='ca-app-pub-7271854751013605/5469561410';
+			break;
+		
+		case 'Android':
+			banner='ca-app-pub-7271854751013605/9457279011';
+			interlestial='ca-app-pub-7271854751013605/1934012219';
+			break;
+	}
+	
+	
+	admob.setOptions({
+        publisherId:  banner,  // Required
+        interstitialAdId: interlestial,  // Optional
     });
+	
+	
 	admob.createBannerView();
 
 	  // Request interstitial (will present automatically when autoShowInterstitial is set to true)
@@ -118,14 +139,14 @@ function admobDisplay(){
 }
 
 
-/*window.analytics.startTrackerWithId('UA-18919211-2') ;*/
-analytics.startTrackerWithId('UA-18919211-2', successAnalytics, failAnalytics);
-
 function successAnalytics(){
 	console.log('Funciona perfecto');
 }
 function failAnalytics(){
 	consolel.log('No se conecta analytics');
 }
+
+/*window.analytics.startTrackerWithId('UA-18919211-2') ;*/
+analytics.startTrackerWithId('UA-18919211-2', successAnalytics, failAnalytics);
 
 document.addEventListener("deviceready", admobDisplay, false);
