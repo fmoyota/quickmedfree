@@ -393,7 +393,7 @@
         </div>
         <div class="modal-body">
           <div class="input-group input-group-sm">
-            <input type="text" class="form-control" placeholder="Buscar..." name="producto">
+            <input type="text" class="form-control" placeholder="Buscar..." name="producto" id="inputProducto">
             <span class="input-group-btn">
             <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
             </span> </div>
@@ -458,28 +458,15 @@
 <script src="cordova.js"></script>
 <script src="js/main.js"></script>
 <script src="js/md5.js"></script> 
+<script src="js/searchControll.js"></script>    
 <script src="js/bootstrap-datetimepicker.min.js"></script> 
 
 <script type="text/javascript"> 
 
 		
 		$(document).ready(function(e) {
-        document.addEventListener("deviceready", getSettings, false);
+       		document.addEventListener("deviceready", getSettings, false);
 			
-            $('#btnProductos').click(function(e) {
-                $('#tabla').val('producto');
-				$('#modal-title span').html('Productos');
-            });
-			
-			$('#btnLaboratorios').click(function(e) {
-                $('#tabla').val('laboratorio');
-				$('#modal-title span').html('Laboratorio');
-            });
-			
-			$('#btnIngredientes').click(function(e) {
-                $('#tabla').val('ingrediente');
-				$('#modal-title span').html('Principio activo');
-            });
 			
 			$("#cumple").datetimepicker({format: 'yyyy-mm-dd', minView:'2'});
 			

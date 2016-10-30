@@ -49,7 +49,7 @@ var getSettings = function getSettings(){
 	
 	$('.loader').fadeOut('slow');
 	
-	//*
+	/*
 	device={'uuid' : '3988505C-F36B-434B-9CD8-E0F39D2DA200','manufacturer' : 'Apple','version' : '10.0.2','platform' : 'iOS','model' : 'iPhone7,2','action' : 'consultar'};	
 		// */		
 						//$('#ej').html(JSON.stringify(device));
@@ -67,7 +67,7 @@ var getSettings = function getSettings(){
 					})
 					  .done(function(data) {
 						var r=data.respuesta;
-						$('#ej').html(JSON.stringify(data));
+						//$('#ej').html(JSON.stringify(data));
 						var not='0';
 						if(r==='1'){ //*
 							$('#email').val(data.datos.email);
