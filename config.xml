@@ -3,8 +3,8 @@
 	xmlns:gap = "http://phonegap.com/ns/1.0"
 	xmlns:android = "http://schemas.android.com/apk/res/android"
 	id        = "ec.com.edifarm.quickmedfree"
-	versionCode="1.1.1"
-	version   = "1.1.1">
+	versionCode="1.2.0"
+	version   = "1.2.0">
 	<name>QuickMed</name>
 	<description>¡La herramienta digital eficaz para su consulta!, encontrará más de 5 000 productos farmacéuticos, con datos técnicos sobre indicaciones, contraindicaciones, dosificación, recomendaciones, precauciones, reacciones adversas, dosis pediátrica, categoría teratogénica y CIE. Cuenta además con precios referenciales de venta al público.</description>
 	<author href="https://www.edifarm.com.ec" email="fmoyota@edifarm.com.ec">Fernando Moyota</author>
@@ -141,7 +141,7 @@
 	<plugin name="cordova-plugin-whitelist" spec="1.2.2" />
 	<plugin name="org.apache.cordova.device" spec="1.0.1" />
 	
-	<plugin name="com.danielcwilson.plugins.googleanalytics" spec="0.6.1" source="pgb" />
+	<plugin name="com.analytics.google" spec="1.2.2" source="pgb" />
 	
 	<!-- Monetiza App AdMob-->
 	<gap:plugin name="phonegap-admob" source="npm"/>

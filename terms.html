@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <meta name="description" content="">
     <meta name="author" content="">
 <title>QuickMed | Vademecum Farmac&eacute;utico</title>
@@ -264,6 +264,12 @@
 <div class="clearfix">&nbsp;</div>
 <h4 class="subtitulo">Versi&oacute;n Premium</h4>
 <p>Pr&oacute;ximamente disponible para descarga.</p>
+
+<div class="clearfix">&nbsp;</div>
+<div class="clearfix">&nbsp;</div>
+
+<div class="clearfix">&nbsp;</div>
+<div class="clearfix">&nbsp;</div>
 </section>
 
 
@@ -325,12 +331,12 @@
 			
 			$('.loader').hide('slow');
 			
-			window.analytics.trackView('Terminos');
+			var option=array{};	
+			option[analytics.OPTIONS.ACTION] = "LoadPage";
+			option[analytics.OPTIONS.LABEL] = "Terminos Y Condiciones";
+			analytics.trackView('Terminos-y-Condiciones', option, successAnalytics, failAnalytics);
 			
-			admob.createBannerView();
-			
-			
-			
+		    document.addEventListener("deviceready", admobDisplay, false);
 			
         });
 	</script>

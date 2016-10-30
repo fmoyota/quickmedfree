@@ -49,7 +49,7 @@ var getSettings = function getSettings(){
 	
 	$('.loader').fadeOut('slow');
 	
-	/*
+	//*
 	device={'uuid' : '3988505C-F36B-434B-9CD8-E0F39D2DA200','manufacturer' : 'Apple','version' : '10.0.2','platform' : 'iOS','model' : 'iPhone7,2','action' : 'consultar'};	
 		// */		
 						//$('#ej').html(JSON.stringify(device));
@@ -105,15 +105,27 @@ var getSettings = function getSettings(){
 
 
 function admobDisplay(){
+      document.removeEventListener('deviceready', admobDisplay, false);
 			 // Set AdMobAds options:
     admob.setOptions({
         publisherId:          "ca-app-pub-7271854751013605/3853227419",  // Required
         interstitialAdId:     "ca-app-pub-7271854751013605/5469561410",  // Optional
     });
-		
+	admob.createBannerView();
+
+	  // Request interstitial (will present automatically when autoShowInterstitial is set to true)
+	admob.requestInterstitial();	
 }
 
-window.analytics.startTrackerWithId('UA-18919211-2') ;
 
+/*window.analytics.startTrackerWithId('UA-18919211-2') ;*/
+analytics.startTrackerWithId('UA-18919211-2', successAnalytics, failAnalytics);
+
+function successAnalytics(){
+	console.log('Funciona perfecto');
+}
+function failAnalytics(){
+	consolel.log('No se conecta analytics');
+}
 
 document.addEventListener("deviceready", admobDisplay, false);

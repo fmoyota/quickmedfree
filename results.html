@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <meta name="description" content="">
     <meta name="author" content="">
 <title>QuickMed | Vademecum Farmac&eacute;utico</title>
@@ -171,8 +171,16 @@
 			  });
 			
 			
-			window.analytics.trackView('Buscar?tabla='+tab+'&producto='+prod);
-			admob.createBannerView();
+			var option=array{};	
+			option[analytics.OPTIONS.ACTION] = "Buscar";
+			option[analytics.OPTIONS.LABEL] = "Busqueda de "+ tab;
+			
+			option[analytics.OPTIONS.PRODUCT_NAME] = "" +prod;
+			option[analytics.OPTIONS.PRODUCT_CATEGORY] = "" + tab;
+			
+			analytics.trackView('Lista-Productos', option, successAnalytics, failAnalytics);
+			
+		    document.addEventListener("deviceready", admobDisplay, false);
 			
         });
 	</script>

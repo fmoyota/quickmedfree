@@ -74,6 +74,7 @@ p{
 	position:fixed;
 	bottom:0;
 	width:100%;
+	z-index:9999;
 }
 
 .footermenu .item{
@@ -94,7 +95,7 @@ p{
 }
 
 .image{
-	height:120px;
+	height:auto;
 	width:100%;
 	margin:0;
 	padding:0;

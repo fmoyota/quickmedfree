@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <meta name="description" content="">
     <meta name="author" content="">
 <title>QuickMed | Vademecum Farmac&eacute;utico</title>
@@ -162,11 +162,18 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 			
         });
 		
-		window.analytics.trackView('Login');
-	
-		admob.requestInterstitialAd({
-			autoShowInterstitial: true
-		});
+		var option=array{};	
+		option[analytics.OPTIONS.ACTION] = "Login";
+		option[analytics.OPTIONS.LABEL] = "Ingreso a sistema";
+		
+		option[analytics.OPTIONS.PRODUCT_NAME] = "Version " +devive.version;
+		option[analytics.OPTIONS.PRODUCT_CATEGORY] = "Plataforma " + device.platform;
+		option[analytics.OPTIONS.PRODUCT_BRAND] = "Marca "+device.manufaturer;
+		option[analytics.OPTIONS.PRODUCT_VARIANT] = "Modelo "+device.model;
+		
+		analytics.trackView('Ingreso-Nuevos-Usuarios', option, successAnalytics, failAnalytics);
+		
+		document.addEventListener("deviceready", admobDisplay, false);
     });
     	
 		
