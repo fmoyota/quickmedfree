@@ -17,7 +17,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 var checkDevice = function checkDevice(){
-	var jqxhr = $.getJSON( "https://www.edifarm.com.ec/edifarm_quickmed/ws/mobile/login.php",
+	var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/login.php",
 				{
 					deviceuuid:device.uuid, 
 					devicename:device.manufacturer, 
@@ -47,9 +47,9 @@ var checkDevice = function checkDevice(){
 
 var getSettings = function getSettings(){
 	
-	$('.loader').fadeOut('slow');	
+	
 						
-					var jqxhr = $.getJSON( "https://www.edifarm.com.ec/edifarm_quickmed/ws/mobile/login.php",
+					var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/login.php",
 					{
 						deviceuuid:device.uuid, 
 						devicename:device.manufacturer, 
@@ -87,6 +87,7 @@ var getSettings = function getSettings(){
 							
 							window.location='home.html';
 						}
+						$('.loader').fadeOut('slow');
 						
 					  })
 					  .fail(function(data) {
@@ -95,7 +96,8 @@ var getSettings = function getSettings(){
 						//alert('Error' + JSON.stringify(data));
 					  })
 					  .always(function() {
-					$('.loader').fadeOut('slow');
+						console.log('Obtener Settings');
+						$('.loader').fadeOut('slow');
 					});
 };
 

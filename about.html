@@ -47,10 +47,29 @@
       <h1><i class="fa fa-shield"></i></h1>
       <small>Principio Activo</small></div>
   </div>
+  <section id="terminos">
+    <h4 class="subtitulo">Acerca de QuickMed<sup>&reg;</sup> App</h4>
+    <div class="clearfix">&nbsp;</div>
+    <p>Aplicación desarrollada por Edifarm y Compa&ntilde;&iacute;a. &copy; Todos los derechos reservados</p>
+    <p><strong>Versi&oacute;n</strong></p>
+    <p>1.4.1</p>
+    
+  </section>
   <div class="clearfix">&nbsp;</div>
   <div class="clearfix">&nbsp;</div>
-  <h4>QuickMed<sup>&reg;</sup></h4>
-  <p>¡La herramienta digital eficaz para su consulta!, encontrará más de 5000 productos farmacéuticos, con datos técnicos sobre indicaciones, contraindicaciones, dosificación, recomendaciones, precauciones, reacciones adversas, dosis pediátrica, categoría teratogénica y CIE. Cuenta además con precios referenciales de venta al público.</p>
+  <section id="privacidad">
+    <h4 class="subtitulo">¿Quiénes somos?</h4>
+    <p>Somos una empresa ecuatoriana con 32 años de experiencia, especialistas en la edición de obras y productos técnicos-científicos, en formato impreso y digital, para las áreas: farmacéutica, agrícola y veterinaria.</p>
+    <p><strong><i class="fa fa-map-marker"></i> Dirección</strong></p>
+    <p>De las Azucenas N45-311 y Malvas, Quito</p>
+    <p><strong><i class="fa fa-phone"></i> Teléfonos</strong></p>
+    <p>(5932) 292 3105 (6) / 225 3550 (1)</p>
+    <p><strong><i class="fa fa-send-o"></i> Email</strong></p>
+    <p><a href="mailto:edifarm@edifarm.com.ec" class="external">edifarm@edifarm.com.ec</a></p>
+    <p><strong><i class="fa fa-globe"></i> Web</strong></p>
+    <p><a href="https://www.edifarm.com.ec" class="external">www.edifarm.com.ec</a></p>
+  </section>
+  <div class="clearfix">&nbsp;</div>
   <div class="clearfix">&nbsp;</div>
 </div>
 <div class="row footermenu">
@@ -103,18 +122,14 @@
 			
 			$('.loader').hide('slow');
 			
-			var option="";	
-			option[analytics.OPTIONS.ACTION] = "Home";
-			option[analytics.OPTIONS.LABEL] = "Home de App";
-			
-			
-			analytics.trackView('Home', option, successAnalytics, failAnalytics);
+			var option = "";	
+			option[analytics.OPTIONS.ACTION] = "LoadPage";
+			option[analytics.OPTIONS.LABEL] = "Acerca de la App";
+			analytics.trackView('Informacion-QuickMed', option, successAnalytics, failAnalytics);
 			
 		    document.addEventListener("deviceready", admobDisplay, false);
-		
+			
         });
-	
-	
-</script>
+	</script>
 </body>
 </html>

@@ -125,7 +125,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 					$('.loader').fadeOut('slow');
 				}else{
 					uclave=md5(uclave);
-					var jqxhr = $.getJSON( "https://www.edifarm.com.ec/edifarm_quickmed/ws/mobile/login.php",
+					var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/login.php",
 					{
 						deviceuuid:device.uuid, 
 						devicename:device.manufacturer, 
