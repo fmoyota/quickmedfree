@@ -487,6 +487,23 @@
 			analytics.trackView('Registro-Nuevos-Usuarios', option, successAnalytics, failAnalytics);
 			
 		    document.addEventListener("deviceready", admobDisplay, false);
+			
+			/* Links Externos */
+			
+			$('a.external').click(function(e) {
+			
+				$('.loader').fadeIn('slow');
+				e.preventDefault();
+				//*
+				var url;
+			
+			  url = $(this).attr('href');
+			  window.open(encodeURI(url), '_system', 'location=no');
+				$('.loader').fadeOut('slow');
+			  return false;
+			  
+			});
+			
         });
 		
 		
