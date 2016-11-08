@@ -144,7 +144,7 @@
 	<plugin name="com.analytics.google" spec="1.2.2" />
 	
 	<!-- Monetiza App AdMob-->
-	<gap:plugin name="phonegap-admob" />
+	<gap:plugin name="phonegap-admob" source="npm"/>
 	
 	
 </widget>
