@@ -18,7 +18,9 @@
 <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 <!-- Theme CSS -->
 <link href="css/style.css" rel="stylesheet">
-<style></style>
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -52,7 +54,7 @@
     <div class="clearfix">&nbsp;</div>
     <p>Aplicación desarrollada por Edifarm y Compa&ntilde;&iacute;a. &copy; Todos los derechos reservados</p>
     <p><strong>Versi&oacute;n</strong></p>
-    <p>1.4.1</p>
+    <p>1.4.3</p>
     
   </section>
   <div class="clearfix">&nbsp;</div>
@@ -68,9 +70,30 @@
     <p><a href="mailto:edifarm@edifarm.com.ec" class="external">edifarm@edifarm.com.ec</a></p>
     <p><strong><i class="fa fa-globe"></i> Web</strong></p>
     <p><a href="https://www.edifarm.com.ec" class="external">www.edifarm.com.ec</a></p>
+    
+    
+  <div class="clearfix">&nbsp;</div>
+  <h4 class="subtitulo">S&iacute;guenos en</h4>
+  <p><a href="https://www.facebook.com/edifarm.ecuador" class="external"><i class="fa fa-facebook-official"></i>  Facebook</a></p>
+  <p><a href="https://twitter.com/edifarm_ecuador" class="external"><i class="fa fa-twitter-square"></i>  Twitter</a></p>
+  <p><a href="https://www.linkedin.com/company/edifarm-ecuador" class="external"><i class="fa fa-linkedin-square"></i>  Linkedin</a></p>
+    
+  <div class="clearfix">&nbsp;</div>
+  <h4 class="subtitulo">Otros productos</h4>
+  <div id="owl-carousel" class="text-center">
+    <div class="item"><a href="https://quickagro.edifarm.com.ec" class="external" target="_blank"><img src="img/quickagro.png" width="50" class="prod"/><br>
+QuickAgro <sup>&reg;</sup></a></div>
+    <div class="item"><a href="https://quickvet.edifarm.com.ec" class="external" target="_blank"><img src="img/quickvet.png" width="50" class="prod"/><br>
+QuickVet <sup>&reg;</sup></a></div>
+</div>
+  
+  
   </section>
   <div class="clearfix">&nbsp;</div>
   <div class="clearfix">&nbsp;</div>
+
+
+  
 </div>
 <div class="row footermenu">
   <div class="col-xs-3 item"><a href="home.html"><i class="fa fa-home"></i></a></div>
@@ -116,18 +139,28 @@
 <script src="cordova.js"></script> 
 <script src="js/main.js"></script> 
 <script src="js/searchControll.js"></script> 
+	<script src="js/owl.carousel.js"></script>
 <script type="text/javascript"> 
 		$(document).ready(function(e) {
             
 			
 			$('.loader').hide('slow');
 			
-			var option = "";	
+			/*var option = "";	
 			option[analytics.OPTIONS.ACTION] = "LoadPage";
 			option[analytics.OPTIONS.LABEL] = "Acerca de la App";
 			analytics.trackView('Informacion-QuickMed', option, successAnalytics, failAnalytics);
-			
+			*/
 		    document.addEventListener("deviceready", admobDisplay, false);
+			
+			$("#owl-carousel").owlCarousel({
+ 
+			  autoPlay: 3000, //Set AutoPlay to 3 seconds
+			  items : 1,
+			  itemsDesktop : [1170,3],
+			  itemsDesktopSmall : [768,2]
+		 
+			});
 			
         });
 	</script>

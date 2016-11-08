@@ -3,8 +3,8 @@
 	xmlns:gap = "http://phonegap.com/ns/1.0"
 	xmlns:android = "http://schemas.android.com/apk/res/android"
 	id        = "ec.com.edifarm.quickmedfree"
-	versionCode="1.4.2"
-	version   = "1.4.2">
+	versionCode="1.4.3"
+	version   = "1.4.3">
 	<name>QuickMed</name>
 	<description>¡La herramienta digital eficaz para su consulta!, encontrará más de 5 000 productos farmacéuticos, con datos técnicos sobre indicaciones, contraindicaciones, dosificación, recomendaciones, precauciones, reacciones adversas, dosis pediátrica, categoría teratogénica y CIE. Cuenta además con precios referenciales de venta al público.</description>
 	<author href="https://www.edifarm.com.ec" email="fmoyota@edifarm.com.ec">Fernando Moyota</author>
@@ -135,16 +135,16 @@
 	<allow-intent href="http://*/*" />
 	<allow-intent href="https://*/*" />
 	
-	<plugin name="com.ohh2ahh.plugins.appavailability" source="pgb" spec="0.3.1" />
-	<plugin name="com.phonegap.plugin.statusbar" source="pgb" spec="1.1.0" />
+	<plugin name="com.ohh2ahh.plugins.appavailability" spec="0.3.1" />
+	<plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" />
 	<plugin name="cordova-plugin-inappbrowser" spec="1.4.0" />
 	<plugin name="cordova-plugin-whitelist" spec="1.2.2" />
 	<plugin name="org.apache.cordova.device" spec="1.0.1" />
 	
-	<plugin name="com.analytics.google" spec="1.2.2" source="pgb" />
+	<plugin name="com.analytics.google" spec="1.2.2" />
 	
 	<!-- Monetiza App AdMob-->
-	<gap:plugin name="phonegap-admob" source="npm"/>
+	<gap:plugin name="phonegap-admob" />
 	
 	
 </widget>

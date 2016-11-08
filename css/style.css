@@ -16,6 +16,10 @@ p{
 	text-align:justify;
 }
 
+img.prod{
+	margin:auto;
+	display:block;
+}
 
 .row{
 	margin-left:0;

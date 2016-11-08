@@ -20,6 +20,8 @@
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
     <!-- Theme CSS -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
 
 <style>
 
@@ -73,6 +75,15 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
     </div>
 
 
+
+
+<div class="clearfix">&nbsp;</div>
+
+<div id="owl-carousel">
+    <div class="item">&nbsp;</div>
+</div>
+
+
 </div>
 
 
@@ -108,6 +119,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
     <script src="cordova.js"></script>
     <script src="js/md5.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/owl.carousel.js"></script>
     <script>
 	$(document).ready(function(e) {
         document.addEventListener("deviceready", checkDevice, false);
@@ -174,6 +186,17 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		analytics.trackView('Ingreso-Nuevos-Usuarios', option, successAnalytics, failAnalytics);
 		
 		document.addEventListener("deviceready", admobDisplay, false);
+		
+		$("#owl-carousel").owlCarousel({
+ 
+		  autoPlay: 3000, //Set AutoPlay to 3 seconds
+	 
+		  items : 1,
+		  itemsDesktop : [1170,3],
+		  itemsDesktopSmall : [768,2]
+	 
+	  	});
+		
     });
     	
 		

@@ -145,6 +145,6 @@ function failAnalytics(){
 }
 
 /*window.analytics.startTrackerWithId('UA-18919211-2') ;*/
-analytics.startTrackerWithId('UA-18919211-2', successAnalytics, failAnalytics);
+//analytics.startTrackerWithId('UA-18919211-2', successAnalytics, failAnalytics);
 
 document.addEventListener("deviceready", admobDisplay, false);

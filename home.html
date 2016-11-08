@@ -18,7 +18,8 @@
 <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 <!-- Theme CSS -->
 <link href="css/style.css" rel="stylesheet">
-<style></style>
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
 </head>
 
 <body>
@@ -52,6 +53,13 @@
   <h4>QuickMed<sup>&reg;</sup></h4>
   <p>¡La herramienta digital eficaz para su consulta!, encontrará más de 5000 productos farmacéuticos, con datos técnicos sobre indicaciones, contraindicaciones, dosificación, recomendaciones, precauciones, reacciones adversas, dosis pediátrica, categoría teratogénica y CIE. Cuenta además con precios referenciales de venta al público.</p>
   <div class="clearfix">&nbsp;</div>
+  
+  <div class="clearfix">&nbsp;</div>
+
+<div id="owl-carousel">
+    <div class="item">&nbsp;</div>
+</div>
+  
 </div>
 <div class="row footermenu">
   <div class="col-xs-3 item"><a href="home.html"><i class="fa fa-home"></i></a></div>
@@ -97,6 +105,7 @@
 <script src="cordova.js"></script> 
 <script src="js/main.js"></script> 
 <script src="js/searchControll.js"></script> 
+	<script src="js/owl.carousel.js"></script>
 <script type="text/javascript"> 
 		$(document).ready(function(e) {
             
@@ -111,6 +120,15 @@
 			analytics.trackView('Home', option, successAnalytics, failAnalytics);
 			
 		    document.addEventListener("deviceready", admobDisplay, false);
+			$("#owl-carousel").owlCarousel({
+ 
+			  autoPlay: 3000, //Set AutoPlay to 3 seconds
+		 
+			  items : 1,
+			  itemsDesktop : [1170,3],
+			  itemsDesktopSmall : [768,2]
+		 
+			});
 		
         });
 	
