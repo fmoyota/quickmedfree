@@ -3,8 +3,8 @@
 	xmlns:gap = "http://phonegap.com/ns/1.0"
 	xmlns:android = "http://schemas.android.com/apk/res/android"
 	id        = "ec.com.edifarm.quickmedfree"
-	versionCode="1.4.3"
-	version   = "1.4.3">
+	versionCode="1.5.1"
+	version   = "1.5.1">
 	<name>QuickMed</name>
 	<description>¡La herramienta digital eficaz para su consulta!, encontrará más de 5 000 productos farmacéuticos, con datos técnicos sobre indicaciones, contraindicaciones, dosificación, recomendaciones, precauciones, reacciones adversas, dosis pediátrica, categoría teratogénica y CIE. Cuenta además con precios referenciales de venta al público.</description>
 	<author href="https://www.edifarm.com.ec" email="fmoyota@edifarm.com.ec">Fernando Moyota</author>
