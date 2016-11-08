@@ -81,7 +81,7 @@
 		<preference name="detect-data-types" value="true" />
 		<preference name="target-device" value="handset" />
 	
-		<plugin name="com.phonegap.plugin.statusbar" spec="1.1.0"  source="npm"/>
+		<plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" />
 	</platform>
 	
 	<platform name="android">
