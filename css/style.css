@@ -271,7 +271,7 @@ input.cmn-toggle-round:checked + label:after {
 
 
 
-@media (min-width: 768px) {
+@media (min-device-width: 768px) {
 	body{
 		font-size:2.4em;	
 	}
