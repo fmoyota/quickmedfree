@@ -111,13 +111,14 @@
             
 			
 			$('.loader').hide('slow');
-			
+			/*
 			var option="";	
 			option[analytics.OPTIONS.ACTION] = "Home";
 			option[analytics.OPTIONS.LABEL] = "Home de App";
-			
-			
 			analytics.trackView('Home', option, successAnalytics, failAnalytics);
+			//*/
+			
+			tracker.trackScreenView('HomeApp');
 			
 		    document.addEventListener("deviceready", admobDisplay, false);
 			$("#owl-carousel").owlCarousel({

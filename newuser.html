@@ -484,6 +484,7 @@
 			
 			$('.loader').fadeOut('slow');
 			
+			/*
 			var option = "";	
 			option[analytics.OPTIONS.ACTION] = "Crear";
 			option[analytics.OPTIONS.LABEL] = "Crear nuevo registro";
@@ -494,6 +495,9 @@
 		    option[analytics.OPTIONS.PRODUCT_VARIANT] = "Modelo "+device.model;
 			
 			analytics.trackView('Registro-Nuevos-Usuarios', option, successAnalytics, failAnalytics);
+			
+			//*/
+			tracker.trackScreenView('Registro');
 			
 		    document.addEventListener("deviceready", admobDisplay, false);
 			

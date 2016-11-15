@@ -188,7 +188,7 @@
 			  });
 			
 			/* window.analytics.trackView('Info?doc='+doc);*/
-			
+			/*
 			var option = "";
 			option[analytics.OPTIONS.ACTION] = "Informacion";
 			option[analytics.OPTIONS.LABEL] = "Ficha de producto " +prod;
@@ -199,7 +199,10 @@
 			
 			analytics.trackView('FichaProducto', option, successAnalytics, failAnalytics);
 			analytics.trackEcommerce(option);
-		    document.addEventListener("deviceready", admobDisplay, false);
+		    //*/
+			tracker.trackScreenView('Info?doc='+doc);
+			
+			document.addEventListener("deviceready", admobDisplay, false);
         
 		});
 	</script>

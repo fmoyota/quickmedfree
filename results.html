@@ -148,7 +148,7 @@
 				
 			  });
 			
-			
+			/*
 			var option = "";	
 			option[analytics.OPTIONS.ACTION] = "Buscar";
 			option[analytics.OPTIONS.LABEL] = "Busqueda de "+ tab;
@@ -157,6 +157,8 @@
 			option[analytics.OPTIONS.PRODUCT_CATEGORY] = "" + tab;
 			
 			analytics.trackView('Lista-Productos', option, successAnalytics, failAnalytics);
+			//*/
+			tracker.trackScreenView('Buscar');
 			
 		    document.addEventListener("deviceready", admobDisplay, false);
 			

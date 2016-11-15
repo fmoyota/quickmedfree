@@ -174,6 +174,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 			
         });
 		
+		/*
 		var option = "";	
 		option[analytics.OPTIONS.ACTION] = "Login";
 		option[analytics.OPTIONS.LABEL] = "Ingreso a sistema";
@@ -184,6 +185,9 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		option[analytics.OPTIONS.PRODUCT_VARIANT] = "Modelo "+device.model;
 		
 		analytics.trackView('Ingreso-Nuevos-Usuarios', option, successAnalytics, failAnalytics);
+		//*/
+		
+		tracker.trackScreenView('LoginApp');
 		
 		document.addEventListener("deviceready", admobDisplay, false);
 		
