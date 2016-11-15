@@ -325,6 +325,13 @@
           <input name="clavec" type="password" id="clavec" class="form-control"/>
         </div>
         <div class="form-group input-group-sm">
+          <label>Eres profesional médico?</label>
+          <div class="switch">
+          	<input id="ismedic" class="cmn-toggle cmn-toggle-round" type="checkbox" value="1">
+          	<label for="ismedic"></label>
+          </div>
+        </div>
+        <div class="form-group input-group-sm">
           <label>Recibir notificaciones por correo? </label>
           <div class="switch">
           	<input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox" value="1">
@@ -411,6 +418,7 @@
 				var uclavec=$('#clavec').val();
 				var ubirth=$('#cumple').val();
 				var notif=$('#cmn-toggle-1:checked').val();
+				var medic=$('#ismedic:checked').val();
 				
 				if(notif){
 					notif='1';
@@ -444,6 +452,7 @@
 					password:uclave,
 					birth:ubirth,
 					notification:notif,
+					medico:medic,
 					action:'registro',
 					
 				}, function() {
@@ -452,7 +461,7 @@
 				  .done(function(data) {
 					  console.log(''+JSON.stringigy(data));
 					var r=data.respuesta;
-					if(r=='1'){
+					if(r==='1'){
 						$('#messageModal').modal('hide');
 						$('#newUserModal').modal('show');
 					}else{

@@ -56,16 +56,25 @@ var getSettings = function getSettings(){
 						version:device.version, 
 						platform:device.platform, 
 						model:device.model,
-						action:'consultar',
+						action:'settings',
 						
 					}, function() {
 						console.log('send form new user');
 					})
 					  .done(function(data) {
 						var r=data.respuesta;
-						
+						var e='';
+						var u='';
 						var not='0';
+						var med='0';
 						if(r==='1'){ //*
+							
+							u=data.datos.email;
+							e=data.datos.nombre_usuario;
+							if(u!==e){
+								$('#email').removeAttr('readonly');
+							}
+							
 							$('#email').val(data.datos.email);
 							$('#nombres').val(data.datos.fname);
 							$('#apellidos').val(data.datos.lname);
@@ -81,6 +90,12 @@ var getSettings = function getSettings(){
 								$('#cmn-toggle-1').attr('checked',true);
 							}else{
 								$('#cmn-toggle-1').attr('checked',false);
+							}
+							med=data.datos.ismedic;
+							if(med==='1'){
+								$('#ismedic').attr('checked',true);
+							}else{
+								$('#ismedic').attr('checked',false);
 							}
 						//*/
 						}else{
