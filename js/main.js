@@ -159,13 +159,10 @@ function failAnalytics(){
 	consolel.log('No se conecta analytics');
 }
 
-/*window.analytics.startTrackerWithId('UA-18919211-2') ;*/
 /*
 analytics.startTrackerWithId('UA-18919211-2', successAnalytics, failAnalytics);
 */
 
-import { GoogleAnalyticsTracker } from 'react-native-google-analytics-bridge';
-let tracker = new GoogleAnalyticsTracker('UA-18919211-2');
 
 
 document.addEventListener("deviceready", admobDisplay, false);
