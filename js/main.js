@@ -159,10 +159,9 @@ function failAnalytics(){
 	consolel.log('No se conecta analytics');
 }
 
-/*
-analytics.startTrackerWithId('UA-18919211-2', successAnalytics, failAnalytics);
-*/
-
-
 
 document.addEventListener("deviceready", admobDisplay, false);
+
+//*
+analytics.startTrackerWithId('UA-18919211-2', successAnalytics, failAnalytics);
+//*/
