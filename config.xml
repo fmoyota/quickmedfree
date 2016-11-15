@@ -148,7 +148,7 @@
 	<plugin name="cordova-plugin-splashscreen" spec="~4.0.0" />
 	
 	
-	<plugin name="react-native-google-analytics-bridge" spec="4.0.1"/>
+	<plugin name="universal-analytics" />
 	
 	<!-- Monetiza App AdMob-->
 	<gap:plugin name="phonegap-admob" source="npm"/>
