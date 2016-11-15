@@ -160,6 +160,12 @@ function failAnalytics(){
 }
 
 /*window.analytics.startTrackerWithId('UA-18919211-2') ;*/
+/*
+import { GoogleAnalyticsTracker } from 'react-native-google-analytics-bridge';
+let tracker = new GoogleAnalyticsTracker('UA-18919211-2');
+*/
+
 analytics.startTrackerWithId('UA-18919211-2', successAnalytics, failAnalytics);
+
 
 document.addEventListener("deviceready", admobDisplay, false);
