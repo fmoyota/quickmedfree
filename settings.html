@@ -463,7 +463,7 @@
 		$(document).ready(function(e) {
        		//document.addEventListener("deviceready", getSettings(), false);
 			
-			getSettings();
+			//getSettings();
 			
 			$("#cumple").datetimepicker({format: 'yyyy-mm-dd', minView:'2'});
 			alert('inicia settings');
@@ -542,7 +542,10 @@
 			analytics.trackView('Configuraciones', option, successAnalytics, failAnalytics);
 			//*/
 			
+			$('.loader').fadeOut('slow');
+		    document.addEventListener("deviceready", getSettings(), false);
 		    document.addEventListener("deviceready", admobDisplay, false);
+			
 			
         });
 	</script>
