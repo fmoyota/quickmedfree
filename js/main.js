@@ -1,5 +1,13 @@
 // JavaScript Document
-
+/*
+device={
+	'uuid':'3988505C-F36B-434B-9CD8-E0F39D2DA200',
+	'manufacturer':'Apple',
+	'version':'10.0.2',
+	'platform':'iOS',
+	'model':'iPhone7,2'
+};
+//*/
 
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
@@ -17,6 +25,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 var checkDevice = function checkDevice(){
+	console.log('CheckDevice ' + JSON.stringify(device));
 	var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/login.php",
 				{
 					deviceuuid:device.uuid, 
@@ -48,6 +57,7 @@ var checkDevice = function checkDevice(){
 var getSettings = function getSettings(){
 	
 	
+	console.log('Settings');
 						
 					var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/login.php",
 					{
@@ -67,6 +77,8 @@ var getSettings = function getSettings(){
 						var u='';
 						var not='0';
 						var med='0';
+						console.log('done: ' +JSON.stringify(data));
+						  
 						if(r==='1'){ //*
 							
 							u=data.datos.email;
@@ -99,6 +111,7 @@ var getSettings = function getSettings(){
 							}
 						//*/
 						}else{
+						console.log('send form new user');
 							
 							window.location='home.html';
 						}

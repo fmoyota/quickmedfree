@@ -18,7 +18,14 @@ $(document).ready(function(e) {
 	
 	$('#serchForm').submit(function(e) {
 		var d=$('#inputProducto').val();
-		$('#inputProducto').val(d.trim());
+		
+			d=d.trim();
+		if(d==''){
+			return false;
+		}
+		$('#inputProducto').val(d);
+		
+		
 	});    
 });
 
