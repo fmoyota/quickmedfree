@@ -461,7 +461,6 @@
 
 		
 		$(document).ready(function(e) {
-       		document.addEventListener("deviceready", getSettings(), false);
 
 			
 			alert('inicia settings');
@@ -541,6 +540,7 @@
 			//*/
 			
 			$("#cumple").datetimepicker({format: 'yyyy-mm-dd', minView:'2'});
+       		document.addEventListener("deviceready", getSettings(), false);
 			
 		    document.addEventListener("deviceready", admobDisplay, false);
 			
