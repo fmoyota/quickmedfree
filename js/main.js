@@ -63,7 +63,7 @@ var getSettings = function getSettings(){
 						version:device.version, 
 						platform:device.platform, 
 						model:device.model,
-						action:'settings',
+						action:'consultar',
 						
 					}, function() {
 						console.log('Get User Data');
