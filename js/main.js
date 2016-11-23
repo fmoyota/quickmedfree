@@ -55,7 +55,7 @@ var checkDevice = function checkDevice(){
 
 
 var getSettings = function getSettings(){
-	
+	alert('settings');
 	
 	console.log('Settings');
 						
