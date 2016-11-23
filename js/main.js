@@ -77,7 +77,7 @@ var getSettings = function getSettings(){
 						  alert(JSON.stringify(data));
 						console.log('done: ' + JSON.stringify(data));
 						  
-						if(r==='1'){ 
+						if(r==='1'){/* 
 							
 							u=data.datos.email;
 							e=data.datos.nombre_usuario;
@@ -108,7 +108,7 @@ var getSettings = function getSettings(){
 								$('#ismedic').attr('checked',false);
 							}
 						
-						}else{
+						*/}else{
 						console.log('send form new user');
 							
 							window.location='home.html';
