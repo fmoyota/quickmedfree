@@ -57,7 +57,7 @@ var checkDevice = function checkDevice(){
 var getSettings = function getSettings(){
 	alert('settings');
 	
-	console.log('Settings');
+
 						
 					var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/login.php",
 					{
@@ -68,7 +68,8 @@ var getSettings = function getSettings(){
 						model:device.model,
 						action:'settings',
 						
-					}, function() {
+					}, function(data) {
+						alert('llama' + JSON.stringify(data));
 						console.log('send form new user');
 					})
 					  .done(function(data) {
@@ -78,9 +79,9 @@ var getSettings = function getSettings(){
 						var not='0';
 						var med='0';
 						  alert(JSON.stringify(data));
-						console.log('done: ' +JSON.stringify(data));
+						console.log('done: ' + JSON.stringify(data));
 						  
-						if(r==='1'){ //*
+						if(r==='1'){ 
 							
 							u=data.datos.email;
 							e=data.datos.nombre_usuario;
@@ -110,12 +111,14 @@ var getSettings = function getSettings(){
 							}else{
 								$('#ismedic').attr('checked',false);
 							}
-						//*/
+						
 						}else{
 						console.log('send form new user');
 							
 							window.location='home.html';
 						}
+						  
+						  alert('fin');
 						$('.loader').fadeOut('slow');
 						
 					  })
@@ -126,6 +129,7 @@ var getSettings = function getSettings(){
 					  })
 					  .always(function() {
 						console.log('Obtener Settings');
+						  alert('FIN');
 						$('.loader').fadeOut('slow');
 					});
 };
