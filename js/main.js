@@ -55,7 +55,8 @@ var checkDevice = function checkDevice() {
 
 var getSettings = function getSettings() {
 	"use strict";
-alert('Settings');
+alert('settings');
+	/*
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 				deviceuuid: device.uuid,
 				devicename: device.manufacturer,
@@ -71,7 +72,7 @@ alert('Settings');
 		.done(function (data) {
 			
 				alert('Done ');
-	/*		
+			
 			var r = data.respuesta;
 			var e = '';
 			var u = '';
@@ -121,7 +122,7 @@ alert('Settings');
 
 			alert('fin');
 			$('.loader').fadeOut('slow');
-//*/
+
 		})
 		.fail(function (data) {
 
@@ -135,6 +136,38 @@ alert('Settings');
 		});
 	
 			$('.loader').fadeOut('slow');
+			//*/
+	
+
+	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
+			deviceuuid: device.uuid,
+			devicename: device.manufacturer,
+			version: device.version,
+			platform: device.platform,
+			model: device.model,
+			action: 'consultar',
+
+		}, function () {
+			alert('function');
+		})
+		.done(function (data) {
+			alert('done');
+			var r = data.respuesta;
+			alert('r ' + r);
+			if (r === '1') {
+				alert('r=1');
+			}
+
+		})
+		.fail(function () {
+			alert('fail');
+		})
+		.always(function () {
+			
+			alert('always');
+			$('.loader').fadeOut('slow');
+		});
+
 };
 
 
