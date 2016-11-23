@@ -77,6 +77,7 @@ var getSettings = function getSettings(){
 						var u='';
 						var not='0';
 						var med='0';
+						  alert(JSON.stringify(data));
 						console.log('done: ' +JSON.stringify(data));
 						  
 						if(r==='1'){ //*
@@ -121,7 +122,7 @@ var getSettings = function getSettings(){
 					  .fail(function(data) {
 						  
 						console.log('Error' + JSON.stringify(data));
-						//alert('Error' + JSON.stringify(data));
+						alert('Error' + JSON.stringify(data));
 					  })
 					  .always(function() {
 						console.log('Obtener Settings');
