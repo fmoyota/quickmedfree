@@ -55,77 +55,81 @@ var checkDevice = function checkDevice(){
 
 
 var getSettings = function getSettings(){
+	"use strict";
 	
 	var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/login.php",
-					{
-						deviceuuid:device.uuid, 
-						devicename:device.manufacturer, 
-						version:device.version, 
-						platform:device.platform, 
-						model:device.model,
-						action:'consultar',
-						
-					}, function() {
-						console.log('Get User Data');
-					})
-					  .done(function(data) {
-						var r=data.respuesta;
-						var e='';
-						var u='';
-						var not='0';
-						var med='0';
-						  alert(JSON.stringify(data));
+				{
+					deviceuuid: device.uuid,
+					devicename: device.manufacturer,
+					version: device.version,
+					platform: device.platform,
+					model: device.model,
+					action: 'consultar',
+
+				},
+				function () {
+					console.log('Get User Data');
+				})
+				.done(function (data) {
+						var r = data.respuesta;
+						var e = '';
+						var u = '';
+						var not = '0';
+						var med = '0';
+						alert(JSON.stringify(data));
 						console.log('done: ' + JSON.stringify(data));
-						  
-						if(r==='1'){/* 
-							
-							u=data.datos.email;
-							e=data.datos.nombre_usuario;
-							if(u!==e){
-								$('#email').removeAttr('readonly');
-							}
-							
-							$('#email').val(data.datos.email);
-							$('#nombres').val(data.datos.fname);
-							$('#apellidos').val(data.datos.lname);
-							$('#telefono').val(data.datos.phone);
-							$("#pais option").filter(function() {
-								return $(this).text() === data.datos.country; 
-							}).prop('selected', true);
-							$('#ciudad').val(data.datos.city);
-							
-							$('#cumple').val(data.datos.birth);
-							not=data.datos.notification;
-							if(not==='1'){
-								$('#cmn-toggle-1').attr('checked',true);
-							}else{
-								$('#cmn-toggle-1').attr('checked',false);
-							}
-							med=data.datos.ismedic;
-							if(med==='1'){
-								$('#ismedic').attr('checked',true);
-							}else{
-								$('#ismedic').attr('checked',false);
-							}
-						
-						*/}else{
-						console.log('send form new user');
-							
-							window.location='home.html';
+
+						if (r === '1') {
+							/* 
+
+													u=data.datos.email;
+													e=data.datos.nombre_usuario;
+													if(u!==e){
+														$('#email').removeAttr('readonly');
+													}
+
+													$('#email').val(data.datos.email);
+													$('#nombres').val(data.datos.fname);
+													$('#apellidos').val(data.datos.lname);
+													$('#telefono').val(data.datos.phone);
+													$("#pais option").filter(function() {
+														return $(this).text() === data.datos.country; 
+													}).prop('selected', true);
+													$('#ciudad').val(data.datos.city);
+
+													$('#cumple').val(data.datos.birth);
+													not=data.datos.notification;
+													if(not==='1'){
+														$('#cmn-toggle-1').attr('checked',true);
+													}else{
+														$('#cmn-toggle-1').attr('checked',false);
+													}
+													med=data.datos.ismedic;
+													if(med==='1'){
+														$('#ismedic').attr('checked',true);
+													}else{
+														$('#ismedic').attr('checked',false);
+													}
+
+												*/
+						} else {
+							console.log('send form new user');
+
+							window.location = 'home.html';
 						}
-						  
-						  alert('fin');
+
+						alert('fin');
 						$('.loader').fadeOut('slow');
-						
-					  })
-					  .fail(function(data) {
-						  
+
+					})
+					.fail(function (data) {
+
 						console.log('Error' + JSON.stringify(data));
 						alert('Error' + JSON.stringify(data));
-					  })
-					  .always(function() {
+					})
+					.always(function () {
 						console.log('Obtener Settings');
-						  alert('FIN');
+						alert('FIN');
 						$('.loader').fadeOut('slow');
 					});
 };
