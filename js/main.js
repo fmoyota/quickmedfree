@@ -70,7 +70,7 @@ alert('Settings');
 			})
 		.done(function (data) {
 			
-				alert('Done ' +JSON.stringify(data));
+				alert('Done ');
 	/*		
 			var r = data.respuesta;
 			var e = '';
@@ -126,7 +126,7 @@ alert('Settings');
 		.fail(function (data) {
 
 			//console.log('Error' + JSON.stringify(data));
-			alert('Error' + JSON.stringify(data));
+			alert('Error' );
 		})
 		.always(function () {
 			console.log('Obtener Settings');
