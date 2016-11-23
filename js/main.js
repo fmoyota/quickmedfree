@@ -25,7 +25,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 var checkDevice = function checkDevice(){
-	console.log('CheckDevice ' + JSON.stringify(device));
+	
 	var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/login.php",
 				{
 					deviceuuid:device.uuid, 
@@ -55,11 +55,8 @@ var checkDevice = function checkDevice(){
 
 
 var getSettings = function getSettings(){
-	alert('settings');
 	
-
-						
-					var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/login.php",
+	var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/login.php",
 					{
 						deviceuuid:device.uuid, 
 						devicename:device.manufacturer, 
@@ -68,9 +65,8 @@ var getSettings = function getSettings(){
 						model:device.model,
 						action:'settings',
 						
-					}, function(data) {
-						alert('llama' + JSON.stringify(data));
-						console.log('send form new user');
+					}, function() {
+						console.log('Get User Data');
 					})
 					  .done(function(data) {
 						var r=data.respuesta;

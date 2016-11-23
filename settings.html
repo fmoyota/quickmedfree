@@ -461,7 +461,7 @@
 
 		
 		$(document).ready(function(e) {
-       		//document.addEventListener("deviceready", getSettings(), false);
+       		document.addEventListener("deviceready", getSettings(), false);
 			
 			//getSettings();
 			
@@ -542,8 +542,6 @@
 			analytics.trackView('Configuraciones', option, successAnalytics, failAnalytics);
 			//*/
 			
-			$('.loader').fadeOut('slow');
-		    document.addEventListener("deviceready", getSettings(), false);
 		    document.addEventListener("deviceready", admobDisplay, false);
 			
 			
