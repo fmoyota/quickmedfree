@@ -56,7 +56,7 @@ var checkDevice = function checkDevice() {
 var getSettings = function getSettings() {
 	"use strict";
 	//*
-	alert('estran settings');
+	//alert('estran settings');
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid: device.uuid,
 			devicename: device.manufacturer,
@@ -66,7 +66,7 @@ var getSettings = function getSettings() {
 			action: 'consultar',
 		}, function () {
 			console.log('Envia a settings');
-			alert('entra');
+			//alert('entra');
 		})
 		.done(function (data) {
 
@@ -77,7 +77,7 @@ var getSettings = function getSettings() {
 			var med = '0';
 
 			console.log('done: ' + JSON.stringify(data));
-			alert('done');
+			//alert('done');
 			if (r === '1') {
 
 
@@ -123,12 +123,12 @@ var getSettings = function getSettings() {
 		.fail(function (data) {
 
 			console.log('Error' + JSON.stringify(data));
-			alert('Error' + JSON.stringify(data));
+			//alert('Error' + JSON.stringify(data));
 		})
 		.always(function () {
 			console.log('Obtener Settings');
 			$('.loader').fadeOut('slow');
-			alert('FIN');
+			//alert('FIN');
 		});
 
 	//*/
