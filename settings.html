@@ -62,15 +62,15 @@
       <div class="tab-content">
         <div role="tabpanel" class="tab-pane fade in active" id="account">
           <h4 class="subtitulo">Tus datos Personales</h4>
-          <p>Déjanos saber más de ti.</p>
+          <p>Por favor completa tu perfil.</p>
           <form>
             <div class="form-group input-group-sm">
               <label>* Nombres</label>
-              <input name="nombres" type="text" id="nombres" class="form-control">
+              <input name="nombres" type="text" id="nombres" class="form-control" required>
             </div>
             <div class="form-group input-group-sm">
               <label>* Apellidos</label>
-              <input name="apellidos" type="text" id="apellidos" class="form-control">
+              <input name="apellidos" type="text" id="apellidos" class="form-control" required>
             </div>
             <div class="form-group input-group-sm">
               <label>* E-mail</label>
@@ -87,7 +87,7 @@
                 <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span> </div>
             </div>
             <div class="form-group input-group-sm">
-              <label>* Pais</label>
+              <label>Pais</label>
               <select name="pais" id="pais" class="form-control">
                 <option value="">Seleccione...</option>
                 <option value="Ecuador">Ecuador</option>
@@ -333,11 +333,11 @@
             </div>
             <div class="form-group input-group-sm">
               <label>Contrase&ntilde;a</label>
-              <input name="clave" type="password" id="clave" class="form-control"/>
+              <input name="clave" type="password" id="clave" class="form-control" required>
             </div>
             <div class="form-group input-group-sm">
               <label>Confirma Contrase&ntilde;a</label>
-              <input name="clavec" type="password" id="clavec" class="form-control"/>
+              <input name="clavec" type="password" id="clavec" class="form-control" required>
             </div>
             <div class="form-group input-group-sm">
 			  <label>Eres profesional médico?</label>
