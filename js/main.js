@@ -1,5 +1,5 @@
 // JavaScript Document
-/*
+//*
 device={
 	'uuid':'3988505C-F36B-434B-9CD8-E0F39D2DA200',
 	'manufacturer':'Apple',
@@ -56,7 +56,7 @@ var checkDevice = function checkDevice() {
 var getSettings = function getSettings() {
 	"use strict";
 	//*
-	
+	alert('estran settings');
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid: device.uuid,
 			devicename: device.manufacturer,
@@ -66,7 +66,7 @@ var getSettings = function getSettings() {
 			action: 'consultar',
 		}, function () {
 			console.log('Envia a settings');
-
+			alert('entra');
 		})
 		.done(function (data) {
 
@@ -77,7 +77,7 @@ var getSettings = function getSettings() {
 			var med = '0';
 
 			console.log('done: ' + JSON.stringify(data));
-
+			alert('done');
 			if (r === '1') {
 
 
