@@ -1,5 +1,5 @@
 // JavaScript Document
-//*
+/*
 device={
 	'uuid':'3988505C-F36B-434B-9CD8-E0F39D2DA200',
 	'manufacturer':'Apple',
@@ -66,7 +66,7 @@ var getSettings = function getSettings() {
 				action: 'consultar',
 			}, function () {
 				
-				alert('Get User Data');
+				//alert('Get User Data');
 			})
 		.done(function (data) {
 			
@@ -77,7 +77,7 @@ alert('Done ');
 			var u = '';
 			var not = '0';
 			var med = '0';
-			alert(JSON.stringify(data));
+			//alert(JSON.stringify(data));
 			console.log('done: ' + JSON.stringify(data));
 
 			if (r === '1') {
@@ -119,7 +119,7 @@ alert('Done ');
 				window.location = 'home.html';
 			}
 
-			alert('fin');
+			//alert('fin');
 			$('.loader').fadeOut('slow');
 
 		})
@@ -130,11 +130,11 @@ alert('Done ');
 		})
 		.always(function () {
 			console.log('Obtener Settings');
-			alert('FIN');
+			//alert('FIN');
 			$('.loader').fadeOut('slow');
 		});
 	
-			$('.loader').fadeOut('slow');
+			//$('.loader').fadeOut('slow');
 			//*/
 	
 
