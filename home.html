@@ -55,6 +55,31 @@
   <div class="clearfix">&nbsp;</div>
   
   <div class="clearfix">&nbsp;</div>
+  
+  
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-bullhorn"></i> Productos Nuevos</h3>
+      </div>
+      <div class="panel-body">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Presentaci&oacute;n</th>
+            </tr>
+          </thead>
+          <tbody id="productos_nuevos">
+            <tr>
+              <td>&nbsp;</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+  
 
 <div id="owl-carousel">
     <div class="item">&nbsp;</div>
@@ -111,6 +136,62 @@
 		$(document).ready(function(e) {
             
 			
+			
+			
+			
+			
+			
+            var doc='nuevos';
+			
+			var id='';
+			var pres='';
+			var pres='';
+			var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/buscar.php",
+			{
+				producto:doc,
+				tabla:doc,
+				deviceuuid: device.uuid,
+				devicename: device.manufacturer,
+				version: device.version,
+				platform: device.platform,
+				model: device.model,
+				
+				
+			}, function(response) {
+			  console.log( "success" );
+			  
+			})
+			  .done(function(data) {
+				console.log( "second success" );
+				
+				
+				
+			  	var nuevos='';
+			  
+				$.each(data,function(i,v){
+					id=v.idproducto;
+					prod=v.producto;
+				pres=v.presentacion;	
+					nuevos=nuevos+'<tr><td> <a href="info.html?producto='+id+'"> '+prod+'</a></td><td>'+pres+'</td></tr>';
+				});
+				
+				
+				$('#productos_nuevos').html(nuevos);
+				
+				
+			  
+			  })
+			  .fail(function() {
+				console.log( "error" );
+			  })
+			  .always(function() {
+				console.log( "complete" );
+				$('.loader').hide('slow');
+			  });
+			
+			
+			
+			
 			$('.loader').hide('slow');
 			//*
 			var option="";	
@@ -130,6 +211,8 @@
 			  itemsDesktopSmall : [768,2]
 		 
 			});
+			
+			
 		
         });
 	

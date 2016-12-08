@@ -277,9 +277,9 @@ img.prod {
 
 @media all and (min-device-width: 1170px) {
 body {
-	font-size: 4em;
+	font-size: 5.5em;
 }
 h1 i.fa {
-	font-size: 3em;
+	font-size: 4.5em;
 }
 }

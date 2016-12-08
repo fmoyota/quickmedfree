@@ -113,7 +113,12 @@
 			var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/buscar.php",
 			{
 				producto:prod,
-				tabla:tab
+				tabla:tab,
+				deviceuuid: device.uuid,
+				devicename: device.manufacturer,
+				version: device.version,
+				platform: device.platform,
+				model: device.model
 			}, function(response) {
 			  console.log( "success" );
 			})

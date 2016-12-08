@@ -78,6 +78,8 @@
 	<splash src="img/splash/QM-480x320.png" width="480" height="320" /> 
 	
 		<preference name="StatusBarOverlaysWebView" value="true" />
+		<preference name="StatusBarBackgroundColor" value="#FFFFFF" />
+		<preference name="StatusBarStyle" value="lightcontent" />
 		<preference name="detect-data-types" value="true" />
 		<preference name="target-device" value="handset" />
 	
