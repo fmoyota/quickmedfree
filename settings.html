@@ -462,8 +462,9 @@
 		
 		$(document).ready(function(e) {
 
+       		document.addEventListener("deviceready", getSettings, false);
 			
-			//alert('inicia settings');
+			alert('llamo a settings');
 			$('#enviar').click(function(e) {
 				
 				$('.loader').fadeIn('fast');
@@ -540,8 +541,7 @@
 			//*/
 			
 			$("#cumple").datetimepicker({format: 'yyyy-mm-dd', minView:'2'});
-       		document.addEventListener("deviceready", getSettings, false);
-			
+			getSettings();
 		    document.addEventListener("deviceready", admobDisplay, false);
 			
 			
