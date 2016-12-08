@@ -463,7 +463,7 @@
 		$(document).ready(function(e) {
 
 			
-			alert('inicia settings');
+			//alert('inicia settings');
 			$('#enviar').click(function(e) {
 				
 				$('.loader').fadeIn('fast');
@@ -540,7 +540,7 @@
 			//*/
 			
 			$("#cumple").datetimepicker({format: 'yyyy-mm-dd', minView:'2'});
-       		document.addEventListener("deviceready", getSettings(), false);
+       		document.addEventListener("deviceready", getSettings, false);
 			
 		    document.addEventListener("deviceready", admobDisplay, false);
 			

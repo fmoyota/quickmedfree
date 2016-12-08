@@ -98,6 +98,54 @@
         </table>
       </div>
     </div>
+    
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-edit"></i> Indicaciones</h3>
+      </div>
+      <div class="panel-body">
+		  <p id="indicaciones"></p>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-dot-circle-o"></i> Contraindicaciones</h3>
+      </div>
+      <div class="panel-body">
+		  <p id="contraindicaciones"></p>
+      </div>
+    </div>
+    
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-history"></i> Dosificaci&oacute;n</h3>
+      </div>
+      <div class="panel-body">
+		  <p id="dosificacion"></p>
+      </div>
+    </div>
+    
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title"><i class="fa fa-heartbeat"></i> CIE 10</h3>
+      </div>
+      <div class="panel-body">
+		  <table class="table">
+          <thead>
+            <tr>
+              <th>C&oacute;digo</th>
+              <th>Descripci&oacute;n</th>
+            </tr>
+          </thead>
+          <tbody id="lista_cie">
+            <tr>
+              <td>&nbsp;</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
     <div class="ej"></div>
   </section>
 </div>
@@ -143,6 +191,10 @@
 			  $('#nombre').html(data.producto.producto);
 			  $('#nombre_prod').html(data.producto.producto);
 			  $('#nombre_laboratorio').html(data.producto.laboratorio);
+			  $('#indicaciones').html(data.producto.indicaciones);
+			  $('#contraindicaciones').html(data.producto.contraindicaciones);
+			  $('#dosificacion').html(data.producto.dosificacion);
+				  
 			  
 			  	var foto=data.producto.foto;
 				if(foto!=''){
@@ -157,6 +209,15 @@
 					principios=principios+'<tr><td>'+value.nombre+'</td><td>'+value.embarazo+'</td><td>'+value.lactancia+'</td></tr>';
 				});
 				$('#lista_principios').html(principios);
+				  
+				  
+				var cie=data.cie10;
+				var indices='';
+					 //$('.ej').html(JSON.stringify(prin));
+				$.each(cie,function(ii,vv){
+					indices=indices+'<tr><td>'+vv.id_cie10+'</td><td>'+vv.descripcion+'</td></tr>';
+				});
+				$('#lista_cie').html(indices);
 				
 				var pres=data.presentaciones;
 				var presentaciones='';
