@@ -462,7 +462,7 @@
 		
 		$(document).ready(function(e) {
 
-       		document.addEventListener("deviceready", getSettings, false);
+       		//document.addEventListener("deviceready", getSettings, false);
 			
 			//alert('llamo a settings');
 			$('#enviar').click(function(e) {
@@ -516,7 +516,7 @@
 					})
 					  .done(function(data) {
 						$('#userModal').modal('show');
-						getSettings();
+						getSettings(device);
 					  })
 					  .fail(function() {
 						$('#mensaje span').html('Verifica tu acceso a datos o wifi');
@@ -541,7 +541,7 @@
 			//*/
 			
 			$("#cumple").datetimepicker({format: 'yyyy-mm-dd', minView:'2'});
-			getSettings();
+			getSettings(device);
 			//alert('Listo Settings');
 		    document.addEventListener("deviceready", admobDisplay, false);
 			

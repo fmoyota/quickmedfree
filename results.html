@@ -104,6 +104,7 @@
 <script type="text/javascript"> 
 		$(document).ready(function(e) {
 			
+			alert(device.uuid);
 			
             var prod=getUrlParameter('producto');
 			var tab=getUrlParameter('tabla');
@@ -113,12 +114,7 @@
 			var jqxhr = $.getJSON( "https://quickmed.edifarm.com.ec/ws/mobile/buscar.php",
 			{
 				producto:prod,
-				tabla:tab,
-				deviceuuid: device.uuid,
-				devicename: device.manufacturer,
-				version: device.version,
-				platform: device.platform,
-				model: device.model
+				tabla:tab
 			}, function(response) {
 			  console.log( "success" );
 			})

@@ -54,7 +54,7 @@ var checkDevice = function checkDevice() {
 };
 
 
-var getSettings = function getSettings() {
+function getSettings(device) {
 	
 	//*
 	//alert('estran settings');
