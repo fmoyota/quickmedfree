@@ -55,7 +55,7 @@ var checkDevice = function checkDevice() {
 
 
 var getSettings = function getSettings() {
-	"use strict";
+	
 	//*
 	//alert('estran settings');
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
