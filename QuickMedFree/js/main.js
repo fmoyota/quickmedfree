@@ -183,12 +183,28 @@ function failAnalytics() {
 	consolel.log('No se conecta analytics');
 }
 
-function writeToFile(d1){
-    var fso = new ActiveXObject("Scripting.FileSystemObject");
-    var fh = fso.OpenTextFile("device.js", 8, false, 0);
-    fh.WriteLine(d1);
-    fh.Close();
-	alert('escribe archivo');
+function writeToFile(device){
+    var jqxhr = $.getJSON("funciones.php", {
+			uuid: device.uuid,
+			manufacturer: device.manufacturer,
+			version: device.version,
+			platform: device.platform,
+			model: device.model,
+			
+		}, function () {
+			console.log('Envia a settings');
+			//alert('entra');
+		})
+		.done(function (data) {
+			console.log('done: ' + JSON.stringify(data));
+					})
+		.fail(function (data) {
+			console.log('Error' + JSON.stringify(data));
+
+		})
+		.always(function () {
+			console.log('Obtener Settings');
+		});
 }
 
 
