@@ -26,9 +26,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 var checkDevice = function checkDevice() {
-	alert("var device="+JSON.stringify(device));
-	var dispositivo="var device="+JSON.stringify(device);
-	writeToFile(dispositivo);
 	
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid: device.uuid,
@@ -54,6 +51,8 @@ var checkDevice = function checkDevice() {
 		.always(function () {
 			$('.loader').fadeOut('slow');
 		});
+	
+	writeToFile(device);
 };
 
 
