@@ -52,7 +52,6 @@ var checkDevice = function checkDevice() {
 			$('.loader').fadeOut('slow');
 		});
 	
-	writeToFile(device);
 };
 
 
