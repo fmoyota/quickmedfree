@@ -1,5 +1,6 @@
 // JavaScript Document
-//*
+
+/*
 device={
 	'uuid':'3988505C-F36B-434B-9CD8-E0F39D2DA200',
 	'manufacturer':'Apple',
