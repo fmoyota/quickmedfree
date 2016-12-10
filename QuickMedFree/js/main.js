@@ -62,7 +62,8 @@ var checkDevice = function checkDevice() {
 function getSettings() {
 	
 	//*
-	alert('estran settings '+JSON.stringify(device));
+	alert('estran settings ');
+	alert(JSON.stringify(device));
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid: device.uuid,
 			devicename: device.manufacturer,
