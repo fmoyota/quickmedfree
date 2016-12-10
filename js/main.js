@@ -27,7 +27,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 var checkDevice = function checkDevice() {
 	
-	saveDevice(device.uuid);
+	
 	
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid: device.uuid,
@@ -53,6 +53,8 @@ var checkDevice = function checkDevice() {
 		.always(function () {
 			$('.loader').fadeOut('slow');
 		});
+	
+	saveDevice(device.uuid);
 	
 };
 
