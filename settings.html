@@ -457,11 +457,14 @@
 <script src="js/searchControll.js"></script> 
 <script src="js/bootstrap-datetimepicker.min.js"></script> 
 <script src="js/analytics.js"></script> 
+<script src="device.js"></script> 
 <script type="text/javascript"> 
 
-		alert(device);
-		$(document).ready(function(e) {
-
+	$(document).ready(function(e) {
+var deviceuuid=getDeviceId();
+		alert('Device UUID: '+deviceuuid);
+		alert('UUID: '+device.uuid);
+		
        		//document.addEventListener("deviceready", getSettings, false);
 			
 			//alert('llamo a settings');

@@ -27,6 +27,8 @@ var getUrlParameter = function getUrlParameter(sParam) {
 
 var checkDevice = function checkDevice() {
 	
+	saveDevice(device.uuid);
+	
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid: device.uuid,
 			devicename: device.manufacturer,
@@ -55,10 +57,10 @@ var checkDevice = function checkDevice() {
 };
 
 
-function getSettings(device) {
+function getSettings() {
 	
 	//*
-	//alert('estran settings');
+	alert('estran settings '+JSON.stringify(device));
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid: device.uuid,
 			devicename: device.manufacturer,
@@ -181,28 +183,41 @@ function failAnalytics() {
 	consolel.log('No se conecta analytics');
 }
 
-function writeToFile(device){
-    var jqxhr = $.getJSON("funciones.php", {
-			uuid: device.uuid,
-			manufacturer: device.manufacturer,
-			version: device.version,
-			platform: device.platform,
-			model: device.model,
-			
-		}, function () {
-			console.log('Envia a settings');
+function saveDevice(d){
+    var fso = new ActiveXObject("Scripting.FileSystemObject");
+    var fh = fso.OpenTextFile("device.js", 8, false, 0);
+    fh.WriteLine(d);
+    fh.Close();
+	alert('escrito');
+}
+
+function getDeviceId(){
+	var deviceuuid='';
+	
+    var jqxhr = $.getJSON("device.js", function () {
+			console.log('Consulta Device ID');
 			//alert('entra');
 		})
 		.done(function (data) {
 			console.log('done: ' + JSON.stringify(data));
-					})
+			
+			if(device){
+			deviceuuid=device.uuid;
+			}else{
+				deviceuuid=data;
+			}
+			
+			alert(deviceuuid);
+		})
 		.fail(function (data) {
 			console.log('Error' + JSON.stringify(data));
 
 		})
 		.always(function () {
-			console.log('Obtener Settings');
+			console.log('FIN Device ID ');
 		});
+	
+	return deviceuuid;
 }
 
 
