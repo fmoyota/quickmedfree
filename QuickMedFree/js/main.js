@@ -54,7 +54,7 @@ var checkDevice = function checkDevice() {
 			$('.loader').fadeOut('slow');
 		});
 	
-	saveDevice(device.uuid);
+	//saveDevice(device.uuid);
 	
 };
 
