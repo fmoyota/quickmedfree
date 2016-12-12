@@ -65,8 +65,7 @@ function getSettings() {
 	
 	var uuid = window.localStorage.getItem("deviceuuid");
 	//*
-	alert('estran settings '+uuid);
-	//alert(JSON.stringify(device));
+//	alert('estran settings '+uuid);
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid:uuid,
 /*			deviceuuid: device.uuid,
@@ -88,7 +87,7 @@ function getSettings() {
 			var med = '0';
 
 			console.log('done: ' + JSON.stringify(data));
-			alert('done: ' + JSON.stringify(data));
+			//alert('done: ' + JSON.stringify(data));
 			if (r === '1') {
 
 
@@ -139,7 +138,7 @@ function getSettings() {
 		.always(function () {
 			console.log('Obtener Settings');
 			$('.loader').fadeOut('slow');
-			alert('FIN');
+			//alert('FIN');
 		});
 
 	//*/
@@ -195,7 +194,7 @@ function saveDevice(d){
     var fh = fso.OpenTextFile("device.txt", 8, false, 0);
     fh.WriteLine(d);
     fh.Close();
-	alert('escrito');
+	//alert('escrito');
 }
 
 function getDeviceId(){
@@ -203,7 +202,7 @@ function getDeviceId(){
 	
     var jqxhr = $.getJSON("device.txt", function () {
 			console.log('Consulta Device ID');
-			alert('entra');
+			//alert('entra');
 		})
 		.done(function (data) {
 			console.log('done: ' + JSON.stringify(data));
@@ -214,7 +213,7 @@ function getDeviceId(){
 				deviceuuid=data;
 			}
 			
-			alert(deviceuuid);
+			//alert(deviceuuid);
 		})
 		.fail(function (data) {
 			console.log('Error' + JSON.stringify(data));
