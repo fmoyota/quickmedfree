@@ -25,9 +25,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 	}
 };
 
-var checkDevice = function checkDevice() {
-	
-	
+function checkDevice() {
 	
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid: device.uuid,
@@ -42,7 +40,7 @@ var checkDevice = function checkDevice() {
 		})
 		.done(function (data) {
 			var r = data.respuesta;
-			if (r === '1') {
+			if (r == '1') {
 				window.location = 'home.html';
 			}
 
@@ -53,7 +51,7 @@ var checkDevice = function checkDevice() {
 		.always(function () {
 			$('.loader').fadeOut('slow');
 		});
-	
+	alert(""+device.uuid);
 	window.localStorage.setItem("deviceuuid", ""+device.uuid);
 	
 //	saveDevice(device.uuid);
