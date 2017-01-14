@@ -447,10 +447,10 @@
 					
 				}, function(data) {
 					console.log('send form new user');
-					alert(''+JSON.stringigy(data));
+					alert(''+JSON.stringify(data));
 				})
 				  .done(function(data) {
-					  console.log(''+JSON.stringigy(data));
+					  
 					var r=data.respuesta;
 					  
 						alert('recibe '+r);
@@ -469,7 +469,6 @@
 				  })
 				  .always(function(data) {
 					$('.loader').fadeOut('slow');
-					alert(''+JSON.stringigy(data));
 				});	
 				
 				}
