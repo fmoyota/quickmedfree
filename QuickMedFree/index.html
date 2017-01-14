@@ -114,9 +114,10 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 
     <!-- Plugin JavaScript -->
     
+	<script src="js/checkDevice.js"></script>
     <script>
 	$(document).ready(function(e) {
-        //document.addEventListener("deviceready", checkDevice, false);
+        document.addEventListener("deviceready", checkDevice, false);
 		
 		
 		$('#entrar').click(function(e) {
@@ -182,8 +183,8 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		analytics.trackView('Ingreso-Nuevos-Usuarios', option, successAnalytics, failAnalytics);
 		//*/
 		
-		checkDevice();
-		document.addEventListener("deviceready", admobDisplay, false);
+		//checkDevice();
+		//document.addEventListener("deviceready", admobDisplay, false);
 		
 		$("#owl-carousel").owlCarousel({
  
@@ -212,7 +213,6 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 	<script src="js/main.js"></script>
     <script src="js/md5.js"></script>
 	<script src="js/owl.carousel.js"></script>
-	<!--<script src="js/checkDevice.js"></script>-->
 	<script src="js/analytics.js"></script>
     
 
