@@ -182,8 +182,8 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		analytics.trackView('Ingreso-Nuevos-Usuarios', option, successAnalytics, failAnalytics);
 		//*/
 		
-		//checkDevice();
-		//document.addEventListener("deviceready", admobDisplay, false);
+		checkDevice();
+		document.addEventListener("deviceready", admobDisplay, false);
 		
 		$("#owl-carousel").owlCarousel({
  
@@ -194,7 +194,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		  itemsDesktopSmall : [768,2]
 	 
 	  	});
-					$('.loader').fadeOut('slow');
+		$('.loader').fadeOut('slow');
 		
     });
     	
@@ -212,10 +212,10 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 	<script src="js/main.js"></script>
     <script src="js/md5.js"></script>
 	<script src="js/owl.carousel.js"></script>
-	<script src="js/checkDevice.js"></script>
+	<!--<script src="js/checkDevice.js"></script>-->
 	<script src="js/analytics.js"></script>
     
-	<script> alert('analytics');</script>
+
     
 </body>
 </html>

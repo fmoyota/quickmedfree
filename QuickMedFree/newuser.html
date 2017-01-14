@@ -457,6 +457,9 @@
 					if(r==='1'){
 						$('#messageModal').modal('hide');
 						$('#newUserModal').modal('show');
+					}else if(r==='2'){
+						$('#mensaje span').html('El email que intenta registrar ya existe en nuestros registros. Intente iniciar sesión');
+						$('#messageModal').modal('show');
 					}else{
 						$('#mensaje span').html('Verifica los datos ingresados. Todos los campos son obligatorios');
 						$('#messageModal').modal('show');
