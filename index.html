@@ -113,14 +113,11 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script>alert('1');</script>
     <script src="cordova.js"></script>
-    <script>alert('2');</script>
     <script>
 	$(document).ready(function(e) {
-		alert('Hizo');
-        document.addEventListener("deviceready", checkDevice, false);
-		alert('Si hizo');
+		
+        //document.addEventListener("deviceready", checkDevice, false);
 		
 		$('#entrar').click(function(e) {
 				
@@ -200,7 +197,9 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 		
 		/* CheckDevice */
-		alert('aqui iva checkDevice');
+		alert('inicia checkDevice');
+		checkDevice();
+		alert('hizo checkDevice');
 /*
 		alert('checkDevice');
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
