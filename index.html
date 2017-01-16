@@ -114,15 +114,14 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 
     <!-- Plugin JavaScript -->
     <script src="cordova.js"></script>
+    <script>alert('cordova');</script>
     <script src="js/jquery.easing.min.js"></script>
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 	<script src="js/main.js"></script>
     <script src="js/md5.js"></script>
-    <script>alert('c');</script>
     
 	<script src="js/owl.carousel.js"></script>
-    <script>alert('fin');</script>
     
     <script>
 	$(document).ready(function(e) {
@@ -211,8 +210,8 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 	
 //*
-		alert('checkDevice');
-	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
+		alert('entra checkDevice');
+		var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid: device.uuid,
 			devicename: device.manufacturer,
 			version: device.version,
@@ -222,10 +221,10 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 
 		}, function (data) {
 			console.log('CheckDevice');
-		alert('envio '+JSON.stringify(data));
+			alert('envio '+JSON.stringify(data));
 		})
 		.done(function (data) {
-		alert('done '+JSON.stringify(data));
+			alert('done '+JSON.stringify(data));
 			var r = data.respuesta;
 			if (r == '1') {
 				window.location = 'home.html';
@@ -233,16 +232,17 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 
 		})
 		.fail(function (data) {
-		alert('falla:'+JSON.stringify(data));
+			alert('falla:'+JSON.stringify(data));
 
 		})
 		.always(function (data) {
-		alert('siempre '+JSON.stringify(data));
+			alert('siempre '+JSON.stringify(data));
 			$('.loader').fadeOut('slow');
 		});
-	alert(""+device.uuid);
-	window.localStorage.setItem("deviceuuid", ""+device.uuid);
+		alert(""+device.uuid);
+		window.localStorage.setItem("deviceuuid", ""+device.uuid);
 		//*/
+		
 
 		
 		/* CheckDevice */
@@ -257,6 +257,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
     
 	<script src="js/analytics.js"></script>
     
+    <script>alert('fin');</script>
 
     
 </body>
