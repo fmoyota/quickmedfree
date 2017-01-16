@@ -26,6 +26,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 function checkDevice() {
+
 	
 		alert('checkDevice');
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
