@@ -175,9 +175,10 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 		analytics.trackView('Ingreso-Nuevos-Usuarios', option, successAnalytics, failAnalytics);
 		//*/
-		
-		//checkDevice();
-		//document.addEventListener("deviceready", admobDisplay, false);
+		alert('antes');
+		checkDevice();
+		alert('despues');
+		document.addEventListener("deviceready", admobDisplay, false);
 		
 		$("#owl-carousel").owlCarousel({
  
@@ -192,7 +193,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 		/* CheckDevice */
 		alert('Verificar');
-
+/*
 		var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid:device.uuid, 
 			devicename:device.manufacturer, 
