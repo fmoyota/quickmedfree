@@ -107,7 +107,6 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 
 
 <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/jquery/jquery-3.1.1.min.js"></script>
     <script type="application/javascript">
 	$(document).ready(function(e) {
@@ -176,9 +175,6 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 		analytics.trackView('Ingreso-Nuevos-Usuarios', option, successAnalytics, failAnalytics);
 		//*/
-		alert('antes');
-		//checkDevice();
-		alert('despues');
 		
 		$("#owl-carousel").owlCarousel({
  
@@ -192,7 +188,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 		
 		/* CheckDevice */
-		alert('Verificar');
+		//alert('Verificar');
 			console.log('Consultar Dispositivo');
 //*
 		$.post("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
@@ -215,20 +211,20 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		}).fail(function (data) {
 			//alert('falla:'+JSON.stringify(data));
 			console.log('falla:'+JSON.stringify(data));
-			$('.loader').fadeOut('slow');
+			//$('.loader').fadeOut('slow');
 
 		})
 		.always(function (data) {
 			//alert('siempre '+JSON.stringify(data));
-			$('.loader').fadeOut('slow');
+			//$('.loader').fadeOut('slow');
 		});
-		alert('Dispositivo: '+device.uuid);
+		//alert('Dispositivo: '+device.uuid);
 		window.localStorage.setItem('deviceuuid', ''+device.uuid);
 //*/
 		
 		
 		/* CheckDevice */
-		alert('hizo checkDevice');
+		//alert('hizo checkDevice');
 		$('.loader').fadeOut('slow');
 		
 		document.addEventListener("deviceready", admobDisplay, false);
