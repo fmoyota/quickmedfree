@@ -191,21 +191,18 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 		
 		/* CheckDevice */
-		alert('iniciar checkDevice');
-		
-	
-//*
-		var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
-			deviceuuid: device.uuid,
-			devicename: device.manufacturer,
-			version: device.version,
-			platform: device.platform,
-			model: device.model,
-			action: 'consultar',
+		alert('Verificar');
 
-		}, function (data) {
-			console.log('CheckDevice');
-	//		alert('envio '+JSON.stringify(data));
+		var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
+			deviceuuid:device.uuid, 
+			devicename:device.manufacturer, 
+			version:device.version, 
+			platform:device.platform, 
+			model:device.model,
+			action: 'consultar',
+		}, function(data) {
+			console.log('Consultar Dispositivo');
+			alert(''+JSON.stringify(data));
 		})
 		.done(function (data) {
 			alert('done '+JSON.stringify(data));
@@ -223,8 +220,8 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 			//alert('siempre '+JSON.stringify(data));
 			$('.loader').fadeOut('slow');
 		});
-		alert(""+device.uuid);
-		window.localStorage.setItem("deviceuuid", ""+device.uuid);
+		alert('Dispositivo: '+device.uuid);
+		window.localStorage.setItem('deviceuuid', ''+device.uuid);
 		//*/
 		
 
