@@ -232,8 +232,8 @@ function getDeviceId(){
 
 
 
-document.addEventListener("deviceready", admobDisplay, false);
+//document.addEventListener("deviceready", admobDisplay, false);
 
 //*
-analytics.startTrackerWithId('UA-18919211-2', successAnalytics, failAnalytics);
+//analytics.startTrackerWithId('UA-18919211-2', successAnalytics, failAnalytics);
 //*/
