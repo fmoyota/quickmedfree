@@ -25,10 +25,11 @@ var getUrlParameter = function getUrlParameter(sParam) {
 	}
 };
 
+/*
 function checkDevice() {
 
 	
-		alert('checkDevice');
+		//alert('checkDevice');
 	var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid: device.uuid,
 			devicename: device.manufacturer,
@@ -39,10 +40,10 @@ function checkDevice() {
 
 		}, function (data) {
 			console.log('CheckDevice');
-		alert('envio '+JSON.stringify(data));
+		//alert('envio '+JSON.stringify(data));
 		})
 		.done(function (data) {
-		alert('done '+JSON.stringify(data));
+		//alert('done '+JSON.stringify(data));
 			var r = data.respuesta;
 			if (r == '1') {
 				window.location = 'home.html';
@@ -50,21 +51,21 @@ function checkDevice() {
 
 		})
 		.fail(function (data) {
-		alert('falla:'+JSON.stringify(data));
+		//alert('falla:'+JSON.stringify(data));
 
 		})
 		.always(function (data) {
-		alert('siempre '+JSON.stringify(data));
+		//alert('siempre '+JSON.stringify(data));
 			$('.loader').fadeOut('slow');
 		});
-	alert(""+device.uuid);
+	//alert(""+device.uuid);
 	window.localStorage.setItem("deviceuuid", ""+device.uuid);
 	
 //	saveDevice(device.uuid);
 	
 };
 
-
+//*/
 function getSettings() {
 	
 	var uuid = window.localStorage.getItem("deviceuuid");
