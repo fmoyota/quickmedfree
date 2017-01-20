@@ -210,7 +210,6 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 	
 //*
-		alert('entra checkDevice');
 		var jqxhr = $.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid: device.uuid,
 			devicename: device.manufacturer,
@@ -221,10 +220,10 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 
 		}, function (data) {
 			console.log('CheckDevice');
-			alert('envio '+JSON.stringify(data));
+	//		alert('envio '+JSON.stringify(data));
 		})
 		.done(function (data) {
-			alert('done '+JSON.stringify(data));
+		//	alert('done '+JSON.stringify(data));
 			var r = data.respuesta;
 			if (r === '1') {
 				window.location = 'home.html';
@@ -236,7 +235,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 
 		})
 		.always(function (data) {
-			alert('siempre '+JSON.stringify(data));
+			//alert('siempre '+JSON.stringify(data));
 			$('.loader').fadeOut('slow');
 		});
 		alert(""+device.uuid);
