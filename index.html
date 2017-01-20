@@ -193,7 +193,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		alert('Verificar');
 		console.log('Consultar Dispositivo');
 		
-		$.post("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
+		$.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid:device.uuid, 
 			devicename:device.manufacturer, 
 			version:device.version, 
