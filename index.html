@@ -107,6 +107,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 
 
 <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/jquery/jquery-3.1.1.min.js"></script>
     <script type="application/javascript">
 	$(document).ready(function(e) {
@@ -176,6 +177,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		analytics.trackView('Ingreso-Nuevos-Usuarios', option, successAnalytics, failAnalytics);
 		//*/
 		
+		
 		$("#owl-carousel").owlCarousel({
  
 		  autoPlay: 3000, //Set AutoPlay to 3 seconds
@@ -188,8 +190,8 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 		
 		/* CheckDevice */
-		//alert('Verificar');
-			console.log('Consultar Dispositivo');
+		alert('Verificar');
+		console.log('Consultar Dispositivo');
 //*
 		$.post("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid:device.uuid, 
@@ -200,7 +202,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 			action: 'consultar',
 		}, function(data) {
 			console.log('Consultar Dispositivo');
-		//alert(''+JSON.stringify(data));
+			//alert(''+JSON.stringify(data));
 		}).done(function (data) {
 			alert('done '+JSON.stringify(data));
 			var r = data.respuesta;
@@ -218,6 +220,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 			//alert('siempre '+JSON.stringify(data));
 			//$('.loader').fadeOut('slow');
 		});
+		
 		alert('Dispositivo: '+device.uuid);
 		window.localStorage.setItem('deviceuuid', ''+device.uuid);
 //*/
