@@ -202,7 +202,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 			console.log('Consultar Dispositivo');
 		//alert(''+JSON.stringify(data));
 		}).done(function (data) {
-			//alert('done '+JSON.stringify(data));
+			alert('done '+JSON.stringify(data));
 			var r = data.respuesta;
 			if (r === '1') {
 				window.location = 'home.html';
@@ -218,13 +218,13 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 			//alert('siempre '+JSON.stringify(data));
 			//$('.loader').fadeOut('slow');
 		});
-		//alert('Dispositivo: '+device.uuid);
+		alert('Dispositivo: '+device.uuid);
 		window.localStorage.setItem('deviceuuid', ''+device.uuid);
 //*/
 		
 		
 		/* CheckDevice */
-		//alert('hizo checkDevice');
+		alert('hizo checkDevice');
 		$('.loader').fadeOut('slow');
 		
 		document.addEventListener("deviceready", admobDisplay, false);
