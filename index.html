@@ -114,16 +114,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 
     <!-- Plugin JavaScript -->
     <script src="cordova.js"></script>
-    <script>alert('cordova');</script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-	<script src="js/main.js"></script>
-    <script src="js/md5.js"></script>
-    
-	<script src="js/owl.carousel.js"></script>
-    
-    <script>
+    <script type="application/javascript">
 	$(document).ready(function(e) {
 		
         //document.addEventListener("deviceready", checkDevice, false);
@@ -206,7 +197,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 		
 		/* CheckDevice */
-		alert('inicia checkDevice');
+		alert('iniciar checkDevice');
 		
 	
 //*
@@ -223,7 +214,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 	//		alert('envio '+JSON.stringify(data));
 		})
 		.done(function (data) {
-		//	alert('done '+JSON.stringify(data));
+			alert('done '+JSON.stringify(data));
 			var r = data.respuesta;
 			if (r === '1') {
 				window.location = 'home.html';
@@ -253,10 +244,19 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 		
     </script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+    <script src="js/md5.js"></script>
+    
+	<script src="js/owl.carousel.js"></script>
+    
+    
     
 	<script src="js/analytics.js"></script>
     
-    <script>alert('fin');</script>
+    <script>alert('final');</script>
 
     
 </body>
