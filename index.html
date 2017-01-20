@@ -176,9 +176,8 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		analytics.trackView('Ingreso-Nuevos-Usuarios', option, successAnalytics, failAnalytics);
 		//*/
 		//alert('antes');
-		checkDevice();
+		//checkDevice();
 		//alert('despues');
-		document.addEventListener("deviceready", admobDisplay, false);
 		
 		$("#owl-carousel").owlCarousel({
  
@@ -233,6 +232,8 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		alert('hizo checkDevice');
 		$('.loader').fadeOut('slow');
 		
+		document.addEventListener("deviceready", admobDisplay, false);
+		
     });
     	
 		
@@ -257,7 +258,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
     
 	<script src="js/analytics.js"></script>
     
-    <script>alert('f');</script>
+    <script>//alert('f');</script>
 
     
 </body>
