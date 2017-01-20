@@ -138,10 +138,10 @@
 	
     <content src="index.html" />
 	
-    <allow-navigation href="http://*/*" />
-	<allow-navigation href="https://*/*" />
 	<access origin="*" subdomains="true" browserOnly="true" />
 	<access uri="*" subdomains="true" />
+    <allow-navigation href="http://*/*" />
+	<allow-navigation href="https://*/*" />
 	<allow-intent href="http://*/*" />
 	<allow-intent href="https://*/*" />
 	
