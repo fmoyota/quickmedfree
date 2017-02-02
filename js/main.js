@@ -39,7 +39,7 @@ function checkDevice() {
 			action: 'consultar',
 
 		}, function (data) {
-			console.log('CheckDevice');
+			//console.log('CheckDevice');
 		//alert('envio '+JSON.stringify(data));
 		})
 		.done(function (data) {
@@ -80,7 +80,7 @@ function getSettings() {
 			model: device.model,*/
 			action: 'consultar',
 		}, function () {
-			console.log('Envia a settings');
+			//console.log('Envia a settings');
 			//alert('entra');
 		})
 		.done(function (data) {
@@ -91,7 +91,7 @@ function getSettings() {
 			var not = '0';
 			var med = '0';
 
-			console.log('done: ' + JSON.stringify(data));
+			//console.log('done: ' + JSON.stringify(data));
 			//alert('done: ' + JSON.stringify(data));
 			if (r === '1') {
 
@@ -127,7 +127,7 @@ function getSettings() {
 
 
 			} else {
-				console.log('send form new user');
+				//console.log('send form new user');
 
 				window.location = 'home.html';
 			}
@@ -137,11 +137,11 @@ function getSettings() {
 		})
 		.fail(function (data) {
 
-			console.log('Error' + JSON.stringify(data));
+			//console.log('Error' + JSON.stringify(data));
 			//alert('Error' + JSON.stringify(data));
 		})
 		.always(function () {
-			console.log('Obtener Settings');
+			//console.log('Obtener Settings');
 			$('.loader').fadeOut('slow');
 			//alert('FIN');
 		});
@@ -187,7 +187,7 @@ function admobDisplay() {
 
 
 function successAnalytics() {
-	console.log('Funciona perfecto');
+	//console.log('Funciona perfecto');
 }
 
 function failAnalytics() {
@@ -206,11 +206,11 @@ function getDeviceId(){
 	var deviceuuid='';
 	
     var jqxhr = $.getJSON("device.txt", function () {
-			console.log('Consulta Device ID');
+			//console.log('Consulta Device ID');
 			//alert('entra');
 		})
 		.done(function (data) {
-			console.log('done: ' + JSON.stringify(data));
+			//console.log('done: ' + JSON.stringify(data));
 			
 			if(device){
 			deviceuuid=device.uuid;
@@ -221,11 +221,11 @@ function getDeviceId(){
 			//alert(deviceuuid);
 		})
 		.fail(function (data) {
-			console.log('Error' + JSON.stringify(data));
+			//console.log('Error' + JSON.stringify(data));
 
 		})
 		.always(function () {
-			console.log('FIN Device ID ');
+			//console.log('FIN Device ID ');
 		});
 	
 	return deviceuuid;

@@ -183,11 +183,11 @@
 			{
 				producto:doc
 			}, function(response) {
-			  console.log( "success" );
+			  //console.log( "success" );
 			  
 			})
 			  .done(function(data) {
-				console.log( "second success" );
+				//console.log( "second success" );
 				prod=data.producto.producto;
 				lab=data.producto.laboratorio;	
 				
@@ -254,10 +254,10 @@
 			  
 			  })
 			  .fail(function() {
-				console.log( "error" );
+				//console.log( "error" );
 			  })
 			  .always(function() {
-				console.log( "complete" );
+				//console.log( "complete" );
 				$('.loader').hide('slow');
 			  });
 			

@@ -140,7 +140,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 						action:'login',
 						
 					}, function(data) {
-						console.log('send form new user');
+						//console.log('send form new user');
 						var dat=data;
 					})
 					  .done(function(data) {
@@ -154,7 +154,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 						
 					  })
 					  .fail(function(data) {
-						console.log('Error' + JSON.stringify(data));
+						//console.log('Error' + JSON.stringify(data));
 						$('#mensaje span').html('Verifica tu acceso a datos o wifi');
 						$('#messageModal').modal('show');
 					  })
@@ -192,9 +192,9 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 		
 		/* CheckDevice */
-		alert('Verificar');
-		console.log('Consultar Dispositivo');
-		alert('consola');
+		//console.log('Consultar Dispositivo');
+
+		alert('Verificar dispositivo');
 		
 		$.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid:device.uuid, 
@@ -204,7 +204,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 			model:device.model,
 			action: 'consultar',
 		}, function(data) {
-			console.log('Consultar Dispositivo');
+			//console.log('Consultar Dispositivo');
 			alert(''+JSON.stringify(data));
 		}).done(function (data) {
 			//alert('done '+JSON.stringify(data));
@@ -215,7 +215,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 
 		}).fail(function (data) {
 			alert('falla:'+JSON.stringify(data));
-			console.log('falla:'+JSON.stringify(data));
+			//console.log('falla:'+JSON.stringify(data));
 			//$('.loader').fadeOut('slow');
 
 		})

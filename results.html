@@ -117,7 +117,7 @@
 				producto:prod,
 				tabla:tab
 			}, function(response) {
-			  console.log( "success" );
+			  //console.log( "success" );
 			})
 			  .done(function(data) {
 				  //$('.ej').html(JSON.stringify(data));
@@ -138,13 +138,13 @@
 					
 					$('#lista_resultado').html(lista);
 				  
-				console.log( "second success" );
+				//console.log( "second success" );
 			  })
 			  .fail(function() {
-				console.log( "error" );
+				//console.log( "error" );
 			  })
 			  .always(function() {
-				console.log( "complete" );
+				//console.log( "complete" );
 				
 				$('.loader').hide('slow');
 				
