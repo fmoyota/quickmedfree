@@ -263,15 +263,9 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
     
 	
 	<script type="text/javascript" charset="utf-8">
-		alert('f');
-    // Wait for PhoneGap to load
-    document.addEventListener("deviceready", chkConn, false);
-    function chkConn() {
-        checkConnection();
-    }
-
-    function checkConnection() {
-        var networkState = navigator.network.connection.type;
+	//	alert('f');
+    
+		var networkState = navigator.network.connection.type;
         var states = {};
         states[Connection.UNKNOWN]  = 'Unknown connection';
         states[Connection.ETHERNET] = 'Ethernet connection';
@@ -281,7 +275,6 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
         states[Connection.CELL_4G]  = 'Cell 4G connection';
         states[Connection.NONE]     = 'No network connection';
         alert('Connection type: ' + states[networkState]);
-    }
 		
     </script>
 
