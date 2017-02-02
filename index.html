@@ -115,6 +115,15 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
         //document.addEventListener("deviceready", checkDevice, false);
 		
+		 var connectionStatus = false;
+		connectionStatus = navigator.onLine ? 'online' : 'offline';
+		if(!connectionStatus || connectionStatus=='offline'){
+			$('#mensaje span').html('Verifica tu acceso a datos o wifi');
+			$('#messageModal').modal('show');
+			$('.loader').fadeOut('slow');
+			
+		}
+		
 		$('#entrar').click(function(e) {
 				
 				$('.loader').fadeIn('fast');
@@ -264,9 +273,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 	
 	<script type="text/javascript" charset="utf-8">
 	//	alert('f');
-    var connectionStatus = false;
-		connectionStatus = navigator.onLine ? 'online' : 'offline';
-		alert(connectionStatus);
+   
     </script>
 
     
