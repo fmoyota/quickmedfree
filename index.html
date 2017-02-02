@@ -209,7 +209,9 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 			$('#mensaje span').html('Verifica tu acceso a internet');
 			$('#messageModal').modal('show');
 			$('.loader').fadeOut('slow');	
-		}else{
+		}
+		
+		
 		
 		/* CheckDevice */
 
@@ -237,7 +239,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 				$('.loader').fadeOut('slow');
 			});
 
-		}
+		
 			
 		//alert('Dispositivo: '+device.uuid);
 		window.localStorage.setItem('deviceuuid', ''+device.uuid);
