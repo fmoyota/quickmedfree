@@ -66,7 +66,7 @@
   
   <button type="button" class="btn btn-primary" id="entrar">Entrar</button>
 </form>
-<div class="clearfix">&nbsp;</div>
+<div class="clearfix" id="internet" style="color: red">&nbsp;</div>
         <hr>
 <div class="clearfix">&nbsp;</div>
 
@@ -206,8 +206,8 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		 var connectionStatus = false;
 		connectionStatus = navigator.onLine ? 'online' : 'offline';
 		connectionStatus = connectionStatus.trim();
-		alert(connectionStatus);
-		if(!connectionStatus || connectionStatus=='offline'){
+		//alert(connectionStatus);
+		if(connectionStatus==='offline'){
 			$('#mensaje span').html('Verifica tu acceso a internet');
 			$('#messageModal').modal('show');
 			$('.loader').fadeOut('slow');	
