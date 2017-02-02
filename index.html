@@ -139,8 +139,9 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 						password:uclave,
 						action:'login',
 						
-					}, function() {
+					}, function(data) {
 						console.log('send form new user');
+						var dat=data;
 					})
 					  .done(function(data) {
 						var r=data.respuesta;
@@ -193,6 +194,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		/* CheckDevice */
 		alert('Verificar');
 		console.log('Consultar Dispositivo');
+		alert('consola');
 		
 		$.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
 			deviceuuid:device.uuid, 
