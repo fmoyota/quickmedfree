@@ -204,10 +204,11 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 	  	});
 		
 		 var connectionStatus = false;
-		connectionStatus = navigator.onLine ? 'online' : 'offline';
-		connectionStatus = connectionStatus.trim();
+		connectionStatus = navigator.onLine ? 'online' : false;
+		
 		//alert(connectionStatus);
-		if(connectionStatus==='offline'){
+		if(!connectionStatus){
+			//alert(connectionStatus);
 			$('#mensaje span').html('Verifica tu acceso a internet');
 			$('#messageModal').modal('show');
 			$('.loader').fadeOut('slow');	
