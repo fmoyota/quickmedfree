@@ -258,7 +258,7 @@ img.prod {
 	width: 40%;
 }
 }
-
+/*
 @media all and (min-width: 768px) {
 .modal-dialog {
 	width: 90%;
@@ -280,7 +280,7 @@ img.prod {
 }
 }
 
-/*
+
 @media all and (min-device-width: 1170px) {
 body {
 	font-size: 5.5em;
