@@ -205,6 +205,8 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		
 		 var connectionStatus = false;
 		connectionStatus = navigator.onLine ? 'online' : 'offline';
+		connectionStatus = connectionStatus.trim();
+		alert(connectionStatus);
 		if(!connectionStatus || connectionStatus=='offline'){
 			$('#mensaje span').html('Verifica tu acceso a internet');
 			$('#messageModal').modal('show');
