@@ -189,6 +189,34 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		$('.loader').fadeOut('slow');
 		
 		
+		
+		
+		$.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
+			deviceuuid:device.uuid, 
+			devicename:device.manufacturer, 
+			version:device.version, 
+			platform:device.platform, 
+			model:device.model,
+			action: 'consultar',
+		}, function(data) {
+			var da=''+JSON.stringify(data);
+		}).done(function (data) {
+			var r = data.respuesta;
+			if (r === '1') {
+				window.location = 'home.html';
+			}
+
+		}).fail(function (data) {
+			var dt=''+JSON.stringify(data);
+
+		})
+		.always(function (data) {
+			$('.loader').fadeOut('slow');
+		});
+
+		alert('final');
+		
+		
     });
     	
 		
@@ -219,31 +247,6 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
    
 		/* CheckDevice */
 
-		
-			$.getJSON("https://quickmed.edifarm.com.ec/ws/mobile/login.php", {
-				deviceuuid:device.uuid, 
-				devicename:device.manufacturer, 
-				version:device.version, 
-				platform:device.platform, 
-				model:device.model,
-				action: 'consultar',
-			}, function(data) {
-				var da=''+JSON.stringify(data);
-			}).done(function (data) {
-				var r = data.respuesta;
-				if (r === '1') {
-					window.location = 'home.html';
-				}
-
-			}).fail(function (data) {
-				var dt=''+JSON.stringify(data);
-
-			})
-			.always(function (data) {
-				$('.loader').fadeOut('slow');
-			});
-
-		alert('final');
 		
     </script>
 
