@@ -47,7 +47,9 @@
   <section id="personales">
     <div class="account">
       <h4 class="subtitulo">Regístrate</h4>
-      <p>Crea una cuenta gratis y usa QuickMed.</p>
+      <p>Crea una cuenta gratis y usa QuickMed&reg;.</p>
+		<small>Si ya tienes una cuenta en QuickMed&reg; Web ingresa <a href="index.html">aquí</a></small>
+			<p>&nbsp;</p>
       <form id="newuserform" action="#" method="post">
         <div class="form-group input-group-sm">
           <label>* Nombres</label>
@@ -66,11 +68,8 @@
           <input name="telefono" type="text" id="telefono" class="form-control">
         </div>
         <div class="form-group input-group-sm">
-          <label>Fecha Nacimiento</label>
-          <div class="input-group">
-          <input name="cumple" type="text" id="cumple" class="form-control" readonly/>
-          <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
-          </div>
+          <label>Fecha Nacimiento</label><br>
+          <input name="cumple" type="text" id="cumple" class="form-control" data-format="YYYY-MM-DD" data-template="YYYY  MMM  DD " data-smartDays="true" readonly/>
         </div>
         <div class="form-group input-group-sm">
           <label>Pais</label>
@@ -392,7 +391,6 @@
 <script type="text/javascript"> 
 		$(document).ready(function(e) {
         	
-			$("#cumple").datetimepicker({format: 'yyyy-mm-dd', minView:'2'});
 			
 			$('#enviar').click(function(e) {
 				
@@ -455,15 +453,12 @@
 					var r=data.respuesta;
 					  
 						//alert('recibe '+r);
-					if(r==='1'){
-						$('#messageModal').modal('hide');
-						$('#newUserModal').modal('show');
-					}else if(r==='2'){
+					if(r==='2'){
 						$('#mensaje span').html('El email que intenta registrar ya existe en nuestros registros. Intente iniciar sesión');
 						$('#messageModal').modal('show');
 					}else{
-						$('#mensaje span').html('Verifica los datos ingresados. Todos los campos son obligatorios');
-						$('#messageModal').modal('show');
+						$('#messageModal').modal('hide');
+						$('#newUserModal').modal('show');
 					}
 					
 				  })
@@ -528,8 +523,16 @@
 <script src="cordova.js"></script>
 <script src="js/main.js"></script>
 <script src="js/md5.js"></script> 
-<script src="js/bootstrap-datetimepicker.min.js"></script> 
 <script src="js/analytics.js"></script>
+
+<script src="js/moment.min.js"></script> 
+<script src="js/combodate.js"></script> 
+
+<script>
+			$(function(){
+				$('#cumple').combodate();    
+			});
+			</script>
 
 </body>
 </html>

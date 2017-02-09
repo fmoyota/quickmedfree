@@ -134,6 +134,16 @@ img.prod {
 	max-width: 80px;
 }
 
+
+.loader_init {
+	width: 100%;
+	height: auto;
+	padding: 10px 15%;
+	margin: 0;
+	text-align: center;
+}
+
+
 #alertapsi{
 	display:none;
 }

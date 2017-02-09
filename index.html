@@ -32,16 +32,7 @@
 
 <body>
 
-<div class="loader">
-<img src="img/logo_load.png" alt=""/>
-<div class="spinner">
-  <div class="rect1"></div>
-  <div class="rect2"></div>
-  <div class="rect3"></div>
-  <div class="rect4"></div>
-  <div class="rect5"></div>
-</div>
-</div>
+
 
 <div class="row">
 <h1 class="titulo"><img src="img/logo_header.png" alt="" width="60"/> QuickMed<sup>&reg;</sup></h1>
@@ -53,14 +44,18 @@
 	
     <div class="login_init"> 
     
+		<h3 class="text-center">Acceso QuickMed&reg;</h3>
+		<p>		Ingrese sus datos de acceso registrados en QuickMed&reg; Web</p>
+		<p>&nbsp;</p>
+		
     <form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
-    <input type="email" class="form-control" id="email" placeholder="Email">
+    <label for="exampleInputEmail1">Usuario o Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Usuario o Email">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Contrase&ntilde;a</label>
-    <input type="password" class="form-control" id="clave" placeholder="Password">
+    <input type="password" class="form-control" id="clave" placeholder="Contrase&ntilde;a">
   </div>
   
   
@@ -69,9 +64,19 @@
 <div class="clearfix" id="internet" style="color: red">&nbsp;</div>
         <hr>
 <div class="clearfix">&nbsp;</div>
-
-No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-plus"></i></a>
+		<p>Si no dispone de una cuenta en QuickMed&reg; Web. <a href="newuser.html">Reg&iacute;strese aquí <i class="fa fa-user-plus"></i></a></p>
     
+    
+    <div class="loader_init">
+		<div class="spinner">
+		  <div class="rect1"></div>
+		  <div class="rect2"></div>
+		  <div class="rect3"></div>
+		  <div class="rect4"></div>
+		  <div class="rect5"></div>
+		</div>
+		<small id="msg_init">Verificando tu dispositivo</small>
+	</div>
     
     </div>
 
@@ -186,7 +191,6 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 		window.localStorage.setItem('deviceuuid', ''+device.uuid);
 
 		
-		$('.loader').fadeOut('slow');
 		
 		
 		
@@ -202,6 +206,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 			var da=''+JSON.stringify(data);
 		}).done(function (data) {
 			var r = data.respuesta;
+			
 			if (r === '1') {
 				window.location = 'home.html';
 			}
@@ -211,7 +216,7 @@ No tienes cuenta? <a href="newuser.html">Reg&iacute;strate <i class="fa fa-user-
 
 		})
 		.always(function (data) {
-			$('.loader').fadeOut('slow');
+			$('.loader_init').fadeOut('slow');
 		});
 
 		//alert('final');
