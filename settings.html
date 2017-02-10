@@ -82,11 +82,10 @@
               <input name="telefono" type="text" id="telefono" class="form-control">
             </div>
             <div class="form-group input-group-sm">
-              <label>Fecha Nacimiento</label>
-              <div class="input-group">
-                <input name="cumple" type="text" id="cumple" class="form-control"/>
-                <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span> </div>
-            </div>
+			  <label>Fecha Nacimiento</label><br>
+			  <input name="cumple" type="text" id="cumple" class="form-control" data-format="YYYY-MM-DD" data-template="YYYY  MMM  DD " data-smartDays="true" readonly/>
+			</div>
+            
             <div class="form-group input-group-sm">
               <label>Pais</label>
               <select name="pais" id="pais" class="form-control">
@@ -341,12 +340,12 @@
               <input name="clavec" type="password" id="clavec" class="form-control" required>
             </div>
             <div class="form-group input-group-sm">
-			  <label>Eres profesional médico?</label>
-			  <div class="switch">
-				<input id="ismedic" class="cmn-toggle cmn-toggle-round" type="checkbox" value="1">
-				<label for="ismedic"></label>
-			  </div>
-			</div>
+              <label>Eres profesional médico?</label>
+              <div class="switch">
+                <input id="ismedic" class="cmn-toggle cmn-toggle-round" type="checkbox" value="1">
+                <label for="ismedic"></label>
+              </div>
+            </div>
             <div class="form-group input-group-sm">
               <label>Recibir notificaciones por correo? </label>
               <div class="switch">
@@ -361,19 +360,17 @@
         <div role="tabpanel" class="tab-pane fade" id="profile">
           <h5>Suscríbete a QuickMed Premium</h5>
           <p>Mas información en <a href="mailto:farma@edifarm.com.ec">farma@edifarm.com.ec</a></p>
-          
           <p>La guía más completa de productos farmacéuticos que se distribuyen en el Ecuador.</p>
-			<p>Beneficios de QuickMed Premium:</p>
-       		<ul>
-				<li>Libre de Publicidad</li>
-				<li>Anuncio de productos nuevos</li>
-				<li>Precios referenciales</li>
-				<li>Medicamentos estratégicos</li>
-				<li>Clasificación ATC</li>
-				<li>Dosis Pediátrica</li>
-				<li>Interacciones Medicamentosas</li>
-			</ul>
-          
+          <p>Beneficios de QuickMed Premium:</p>
+          <ul>
+            <li>Libre de Publicidad</li>
+            <li>Anuncio de productos nuevos</li>
+            <li>Precios referenciales</li>
+            <li>Medicamentos estratégicos</li>
+            <li>Clasificación ATC</li>
+            <li>Dosis Pediátrica</li>
+            <li>Interacciones Medicamentosas</li>
+          </ul>
         </div>
         <!--<div role="tabpanel" class="tab-pane fade" id="messages">...</div>
       <div role="tabpanel" class="tab-pane fade" id="settings">...</div>--> 
@@ -470,7 +467,7 @@
 <script src="js/md5.js"></script> 
 <script src="js/main.js"></script> 
 <script src="js/searchControll.js"></script> 
-<script src="js/bootstrap-datetimepicker.min.js"></script> 
+	
 <script type="text/javascript"> 
 
 	$(document).ready(function(e) {
@@ -556,13 +553,19 @@
 			analytics.trackView('Configuraciones', option, successAnalytics, failAnalytics);
 			//*/
 			
-			$("#cumple").datetimepicker({format: 'yyyy-mm-dd', minView:'2'});
 			getSettings();
 			//alert('Listo Settings');
 		    document.addEventListener("deviceready", admobDisplay, false);
 			
 			
         });
+	</script> 
+	<script src="js/moment.min.js"></script> 
+	<script src="js/combodate.js"></script> 
+	<script>
+		$(function(){
+			$('#cumple').combodate();    
+		});
 	</script>
 </body>
 </html>
