@@ -83,7 +83,7 @@
             </div>
             <div class="form-group input-group-sm">
 			  <label>Fecha Nacimiento</label><br>
-			  <input name="cumple" type="text" id="cumple" class="form-control" data-format="YYYY-MM-DD" data-template="YYYY  MMM  DD " data-smartDays="true" value="" readonly/>
+			  <input name="cumple" type="text" id="cumple" class="form-control" data-format="YYYY-MM-DD" data-template="YYYY  MMM  DD " data-smartDays="true" readonly/>
 			</div>
             
             <div class="form-group input-group-sm">
@@ -465,6 +465,16 @@
 <script src="cordova.js"></script> 
 <script src="js/analytics.js"></script> 
 <script src="js/md5.js"></script> 
+
+
+	<script src="js/moment.min.js"></script> 
+	<script src="js/combodate.js"></script> 
+	<script>
+		$(function(){
+			//$('#cumple').combodate();    
+		});
+	</script>
+
 <script src="js/main.js"></script> 
 <script src="js/searchControll.js"></script> 
 	
@@ -560,12 +570,5 @@
 			
         });
 	</script> 
-	<script src="js/moment.min.js"></script> 
-	<script src="js/combodate.js"></script> 
-	<script>
-		$(function(){
-			$('#cumple').combodate();    
-		});
-	</script>
 </body>
 </html>

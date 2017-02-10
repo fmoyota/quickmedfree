@@ -112,6 +112,8 @@ function getSettings() {
 				$('#ciudad').val(data.datos.city);
 
 				$('#cumple').val(data.datos.birth);
+				$('#cumple').combodate();
+				
 				not = data.datos.notification;
 				if (not === '1') {
 					$('#cmn-toggle-1').attr('checked', true);
